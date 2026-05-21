@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DiamondEdge | MLB Picks</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+:root{--bg:#080b10;--bg2:#0e1219;--bg3:#141923;--bg4:#1a2130;--border:#1f2a3a;--border2:#28374f;--text:#e8edf5;--muted:#5a7090;--dim:#3a5070;--green:#00e676;--green2:#00c853;--red:#ff3d3d;--gold:#ffd600;--blue:#4a9eff;--purple:#bb86fc}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif}
+body{display:flex;flex-direction:column;overflow:hidden}
+.hidden{display:none!important}
+/* NAV */
+.topnav{height:52px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 20px;gap:12px;flex-shrink:0}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px}
+.logo em{color:var(--green);font-style:normal}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:9px;padding:3px 8px;border-radius:3px;letter-spacing:1px;text-transform:uppercase}
+.p-model{background:rgba(74,158,255,.09);color:var(--blue);border:.5px solid rgba(74,158,255,.25)}
+.p-live{background:rgba(0,230,118,.10);color:var(--green);border:.5px solid rgba(0,230,118,.30)}
+.p-date{background:var(--bg3);color:var(--muted);border:.5px solid var(--border)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.blink{animation:pulse 2s infinite}
+.nav-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.ntab{font-family:'IBM Plex Mono',monospace;font-size:10px;padding:5px 14px;border:.5px solid var(--border);border-radius:4px;cursor:pointer;background:transparent;color:var(--muted);letter-spacing:1px;text-transform:uppercase;transition:all .12s}
+.ntab:hover,.ntab.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.gen-time{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--dim)}
+/* RECORD */
+.rstrip{height:44px;background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:stretch;flex-shrink:0}
+.rc{display:flex;flex-direction:column;justify-content:center;padding:0 16px;border-right:.5px solid var(--border)}
+.rc:last-child{border-right:none;margin-left:auto;display:flex;flex-direction:row;align-items:center;padding:0 14px;gap:8px}
+.rl{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1px}
+.rv{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:1px;line-height:1}
+.g{color:var(--green)}.r{color:var(--red)}.y{color:var(--gold)}
+.rprofit{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600}
+.rbtn{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:3px 9px;border:.5px solid var(--border);border-radius:3px;background:transparent;color:var(--muted);cursor:pointer}
+.rbtn:hover{border-color:var(--red);color:var(--red)}
+/* LAYOUT */
+.main{display:flex;flex:1;overflow:hidden}
+/* SIDEBAR */
+.sidebar{width:200px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto}
+.sbs{padding:10px;border-bottom:1px solid var(--border)}
+.sbl{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;display:block}
+.sbb{display:block;width:100%;text-align:left;font-family:'IBM Plex Mono',monospace;font-size:9px;padding:5px 9px;border:.5px solid transparent;border-radius:4px;cursor:pointer;background:transparent;color:var(--muted);margin-bottom:2px;letter-spacing:1px;text-transform:uppercase;transition:all .10s}
+.sbb:hover{background:var(--bg3);color:var(--text)}
+.sbb.active{background:var(--text);color:var(--bg)}
+.wrow{display:flex;align-items:center;gap:5px;padding:2.5px 0}
+.wl{font-size:9px;color:var(--muted);flex:1}
+.wb{width:44px;height:3px;background:var(--bg4);border-radius:2px;overflow:hidden}
+.wf{height:100%;background:var(--green2);border-radius:2px}
+.wp{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--dim);width:24px;text-align:right}
+.sbinfo{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--dim);line-height:1.9}
+.sbinfo b{color:var(--muted)}
+/* CONTENT */
+.content{flex:1;overflow-y:auto;padding:12px 16px}
+.odds-note{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--dim);margin-bottom:8px}
+.shdr{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin:5px 0 8px;padding-bottom:4px;border-bottom:.5px solid var(--border);display:flex;align-items:center;gap:7px}
+.scnt{background:var(--bg3);color:var(--dim);border:.5px solid var(--border);border-radius:2px;padding:1px 5px;font-size:8px}
+.ldot{width:5px;height:5px;background:var(--red);border-radius:50%;animation:pulse 1.5s infinite}
+/* CARDS */
+.card{background:var(--bg2);border:.5px solid var(--border);border-radius:9px;padding:11px 14px;margin-bottom:8px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent}
+.card.TOP{border-color:rgba(255,214,0,.40)}.card.TOP::before{background:var(--gold)}
+.card.GOOD{border-color:rgba(0,230,118,.32)}.card.GOOD::before{background:var(--green2)}
+.card.SKIP{opacity:.40}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 7px;border-radius:2px;letter-spacing:1px;text-transform:uppercase;display:inline-block}
+.bTOP{background:rgba(255,214,0,.12);color:var(--gold);border:.5px solid rgba(255,214,0,.35)}
+.bGOOD{background:rgba(0,200,83,.10);color:var(--green);border:.5px solid rgba(0,200,83,.30)}
+.bWATCH{background:var(--bg3);color:var(--muted);border:.5px solid var(--border)}
+.bSKIP{background:rgba(255,61,61,.08);color:var(--red);border:.5px solid rgba(255,61,61,.22)}
+.bLIVE{background:rgba(255,61,61,.11);color:var(--red);border:.5px solid rgba(255,61,61,.30)}
+.bFINAL{background:var(--bg4);color:var(--dim);border:.5px solid var(--border)}
+.ctop{display:flex;align-items:center;gap:5px;margin-bottom:7px}
+.cbadges{display:flex;gap:4px;align-items:center;flex:1;flex-wrap:wrap}
+.cacts{display:flex;align-items:center;gap:4px}
+.cscore{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)}
+.spline{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--dim);margin-bottom:6px}
+.matchup{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.tname{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;line-height:1}
+.atsym{font-size:12px;color:var(--dim)}
+.mlp{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500}
+.mlfav{color:#ff6b6b}.mldog{color:var(--green)}
+.noml{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 7px;border-radius:3px;background:rgba(255,61,61,.09);color:var(--red);border:.5px solid rgba(255,61,61,.25);margin-left:auto}
+.pickbar{display:flex;align-items:center;gap:7px;background:var(--bg3);border:.5px solid var(--border2);border-radius:5px;padding:7px 10px;margin-bottom:5px}
+.pkl{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.pkt{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--green);letter-spacing:1px;margin-left:3px}
+.pkml{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--green)}
+.evtag{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--gold);font-weight:600}
+.ktag{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);background:var(--bg4);padding:2px 6px;border-radius:3px;border:.5px solid var(--border)}
+.cbar{height:3px;background:var(--bg4);border-radius:2px;margin:5px 0;overflow:hidden}
+.cfill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--green2),var(--gold))}
+.prow{display:flex;justify-content:space-between;margin:2px 0 5px;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)}
+.prow b{color:var(--text)}
+/* metric boxes */
+.mrow{display:flex;gap:5px;margin-bottom:6px;flex-wrap:wrap}
+.mbox{background:var(--bg3);border:.5px solid var(--border);border-radius:4px;padding:5px 8px;flex:1;min-width:70px}
+.mlbl{font-family:'IBM Plex Mono',monospace;font-size:7px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.mcmp{display:flex;align-items:center;gap:3px;font-family:'IBM Plex Mono',monospace;font-size:10px;flex-wrap:wrap}
+.mbetter{color:var(--green)}.mworse{color:var(--red)}.mneutral{color:var(--muted)}
+/* signals */
+.sigs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:4px}
+.sig{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 6px;border-radius:2px;background:rgba(74,158,255,.07);color:var(--blue);border:.5px solid rgba(74,158,255,.18)}
+.f5sig{background:rgba(187,134,252,.07);color:var(--purple);border:.5px solid rgba(187,134,252,.18)}
+/* mark buttons */
+.mkbtn{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:3px 8px;border-radius:3px;cursor:pointer;background:transparent}
+.mkw{border:.5px solid rgba(0,230,118,.40);color:var(--green)}.mkw:hover{background:rgba(0,230,118,.09)}
+.mkl{border:.5px solid rgba(255,61,61,.40);color:var(--red)}.mkl:hover{background:rgba(255,61,61,.08)}
+.rpill{font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;padding:2px 8px;border-radius:3px;display:inline-block}
+.rpW{background:rgba(0,230,118,.14);color:var(--green);border:.5px solid rgba(0,230,118,.33)}
+.rpL{background:rgba(255,61,61,.09);color:var(--red);border:.5px solid rgba(255,61,61,.28)}
+.ubtn{font-family:'IBM Plex Mono',monospace;font-size:7px;padding:2px 5px;border:.5px solid var(--border);border-radius:2px;background:transparent;color:var(--dim);cursor:pointer}
+.xbtn{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 8px;border:.5px solid var(--border);border-radius:3px;background:transparent;color:var(--dim);cursor:pointer}
+.xbtn:hover{border-color:var(--muted);color:var(--muted)}
+/* expanded stats */
+.xpanel{display:none;margin-top:8px;padding-top:8px;border-top:.5px solid var(--border)}
+.xpanel.open{display:block}
+.xlabel{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:8px}
+.scell{background:var(--bg3);border:.5px solid var(--border);border-radius:4px;padding:5px 7px}
+.sclbl{font-family:'IBM Plex Mono',monospace;font-size:7px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.scv{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px}
+.scbetter{color:var(--green)}.scworse{color:var(--red)}
+.crow{display:flex;align-items:center;gap:6px;padding:2.5px 0}
+.clbl{font-size:8px;color:var(--muted);width:82px;flex-shrink:0}
+.cbw{flex:1;height:5px;background:var(--bg4);border-radius:2px;overflow:hidden}
+.cfill2{height:100%;border-radius:2px}
+.cpos{background:var(--green2)}.cneg{background:var(--red)}
+.cval{font-size:8px;font-family:'IBM Plex Mono',monospace;width:38px;text-align:right}
+.mathbox{background:var(--bg4);border:.5px solid var(--border);border-radius:4px;padding:8px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);line-height:1.85;margin-top:8px}
+.mathbox b{color:var(--text)}
+/* HISTORY */
+.hday{background:var(--bg2);border:.5px solid var(--border);border-radius:7px;margin-bottom:7px;overflow:hidden}
+.hhdr{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;cursor:pointer;user-select:none}
+.hhdr:hover{background:var(--bg3)}
+.hdate{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:1px;display:flex;align-items:center;gap:8px}
+.todpip{font-family:'IBM Plex Mono',monospace;font-size:7px;padding:2px 5px;border-radius:2px;background:rgba(0,230,118,.11);color:var(--green);border:.5px solid rgba(0,230,118,.30)}
+.hright{display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10px}
+.hchev{font-size:9px;color:var(--dim);transition:transform .15s;display:inline-block}
+.hchev.open{transform:rotate(180deg)}
+.hbody{border-top:.5px solid var(--border)}
+.hdbar{display:flex;gap:12px;padding:4px 14px;background:var(--bg3);font-family:'IBM Plex Mono',monospace;font-size:9px;align-items:center;flex-wrap:wrap}
+.hgrow{display:flex;align-items:center;gap:6px;padding:5px 14px;border-bottom:.5px solid var(--border);flex-wrap:wrap}
+.hgrow:last-child{border-bottom:none}
+.hbadge{font-family:'IBM Plex Mono',monospace;font-size:7px;padding:2px 4px;border-radius:2px}
+.hmatch{font-family:'Bebas Neue',sans-serif;font-size:13px;flex:1;min-width:65px}
+.hpick{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted)}
+.hsc{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--dim)}
+.hprof{font-family:'IBM Plex Mono',monospace;font-size:9px}
+.hmw{font-family:'IBM Plex Mono',monospace;font-size:7px;padding:2px 5px;border:.5px solid rgba(0,230,118,.35);border-radius:2px;background:transparent;color:var(--green);cursor:pointer}
+.hml2{font-family:'IBM Plex Mono',monospace;font-size:7px;padding:2px 5px;border:.5px solid rgba(255,61,61,.35);border-radius:2px;background:transparent;color:var(--red);cursor:pointer}
+.hundo{font-family:'IBM Plex Mono',monospace;font-size:7px;padding:2px 5px;border:.5px solid var(--border);border-radius:2px;background:transparent;color:var(--dim);cursor:pointer}
+/* LOAD JSON TAB */
+.jsonpanel{background:var(--bg2);border:1px dashed var(--border2);border-radius:8px;padding:14px;margin-bottom:12px}
+.jlbl{font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;display:block}
+.jsonpanel textarea{width:100%;height:110px;background:var(--bg3);border:.5px solid var(--border);border-radius:4px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:10px;padding:8px;resize:vertical}
+.jsonpanel textarea:focus{outline:none;border-color:var(--green2)}
+.lbtn{font-family:'IBM Plex Mono',monospace;font-size:9px;padding:6px 14px;border:.5px solid var(--green2);border-radius:4px;background:rgba(0,200,83,.09);color:var(--green);cursor:pointer;margin-top:6px;letter-spacing:1px;text-transform:uppercase}
+.lstatus{font-family:'IBM Plex Mono',monospace;font-size:9px;margin-top:5px}
+.linstr{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);line-height:1.9}
+.linstr code{color:var(--green);background:var(--bg3);padding:1px 5px;border-radius:2px}
+.linstr b{color:var(--text)}
+/* MISC */
+.empty{text-align:center;padding:40px;color:var(--muted);font-size:13px;line-height:1.7}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinner{width:24px;height:24px;border:2px solid var(--border2);border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite;display:inline-block}
+.loading{text-align:center;padding:40px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="logo">DIAMOND<em>EDGE</em></div>
+  <span class="pill p-model">⚡ Quant v2</span>
+  <span class="pill p-live blink" id="liveTag">● LIVE</span>
+  <span class="pill p-date" id="dateBadge"></span>
+  <div class="nav-right">
+    <span class="gen-time" id="genTime"></span>
+    <button class="ntab active" onclick="showView('today',this)">Today's Picks</button>
+    <button class="ntab"        onclick="showView('history',this)">Pick History</button>
+    <button class="ntab"        onclick="showView('load',this)">Load JSON</button>
+  </div>
+</div>
+
+<div class="rstrip">
+  <div class="rc"><div class="rl">All-Time W</div><div class="rv g" id="rW">0</div></div>
+  <div class="rc"><div class="rl">All-Time L</div><div class="rv r" id="rL">0</div></div>
+  <div class="rc"><div class="rl">Pending</div><div class="rv y" id="rP">0</div></div>
+  <div class="rc"><div class="rl">Win %</div><div class="rv" id="rPct">—</div></div>
+  <div class="rc"><div class="rl">All-Time P/L</div><div class="rprofit" id="rProfit">+$0</div></div>
+  <div class="rc"><button class="rbtn" onclick="if(confirm('Reset ALL results?')){clearAll()}">Reset All</button></div>
+</div>
+
+<div class="main">
+  <div class="sidebar">
+    <div class="sbs">
+      <span class="sbl">Filter</span>
+      <button class="sbb active" onclick="setFilter('all',this)">All Games</button>
+      <button class="sbb"        onclick="setFilter('best',this)">Best Bets Only</button>
+      <button class="sbb"        onclick="setFilter('value',this)">Value Dogs</button>
+      <button class="sbb"        onclick="setFilter('live',this)">Live Now</button>
+    </div>
+    <div class="sbs">
+      <span class="sbl">Model Weights</span>
+      <div class="wrow"><span class="wl">Proprietary Core</span><div class="wb"><div class="wf" style="width:100%"></div></div><span class="wp">40%</span></div>
+      <div class="wrow"><span class="wl">Pitch Modeling</span><div class="wb"><div class="wf" style="width:75%"></div></div><span class="wp">30%</span></div>
+      <div class="wrow"><span class="wl">Offense</span><div class="wb"><div class="wf" style="width:50%"></div></div><span class="wp">20%</span></div>
+      <div class="wrow"><span class="wl">Contextual</span><div class="wb"><div class="wf" style="width:25%"></div></div><span class="wp">10%</span></div>
+    </div>
+    <div class="sbs">
+      <span class="sbl">EV Threshold</span>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--green)">≥ 4.0%</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--dim);margin-top:2px">Quarter-Kelly staking</div>
+    </div>
+    <div class="sbs">
+      <span class="sbl">Data</span>
+      <div class="sbinfo"><b>33,292 games</b><br>2010–2024 trained<br>Walk-forward valid.<br><br><b>Live feeds:</b><br>MLB Stats API<br>The Odds API<br><br><b>Auto-runs:</b><br>8 AM Central daily<br>via GitHub Actions</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="viewToday">
+      <div class="odds-note" id="oddsNote"></div>
+      <div id="gc"><div class="loading"><div class="spinner"></div><div style="margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px">Loading today's picks…</div></div></div>
+    </div>
+    <div id="viewHistory" class="hidden"><div id="hc"></div></div>
+    <div id="viewLoad" class="hidden">
+      <div class="jsonpanel">
+        <span class="jlbl">Paste picks.json output here (manual override)</span>
+        <textarea id="jsonInput" placeholder='{"date":"2026-05-13","picks":[]}'></textarea>
+        <button class="lbtn" onclick="loadJSON()">⚡ Load Picks</button>
+        <div id="lstat" class="lstatus"></div>
+      </div>
+      <div class="linstr">
+        <b>How the site auto-updates:</b><br>
+        Engine runs at 8 AM Central → writes picks.json<br>
+        GitHub commits it → site fetches it automatically<br><br>
+        <b>Manual override (this tab):</b><br>
+        1. Run <code>python engine/run.py</code> locally<br>
+        2. Copy <code>picks.json</code> contents<br>
+        3. Paste above and click Load Picks<br><br>
+        <b>Cron (local auto-run):</b><br>
+        <code>0 8 * * * cd /path && python engine/run.py</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PICKS_URL = './picks.json';
+const POLL_MS   = 5 * 60 * 1000;
+const SK        = 'de_v8';
+
+// ── Storage ──────────────────────────────────────────────────────────────────
+function load(){try{const s=localStorage.getItem(SK);return s?JSON.parse(s):{results:{},days:{}};}catch(e){return{results:{},days:{}};}}
+function save(d){try{localStorage.setItem(SK,JSON.stringify(d));}catch(e){}}
+function getR(id){return load().results[id]||null;}
+function setR(id,r){const d=load();if(r===null)delete d.results[id];else d.results[id]=r;save(d);}
+function clearAll(){save({results:{},days:{}});renderRecord();renderGames();}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+const fmtML=ml=>ml==null?'N/A':ml>0?'+'+ml:String(ml);
+const impl=ml=>!ml?0.5:ml<0?Math.abs(ml)/(Math.abs(ml)+100):100/(ml+100);
+const pay=ml=>!ml?0:ml<0?(100/Math.abs(ml))*100:ml;
+const fmtDate=k=>{if(!k)return'';const[y,m,d]=k.split('-').map(Number);return new Date(y,m-1,d).toLocaleDateString('en-US',{weekday:'short',month:'long',day:'numeric',year:'numeric'});};
+const todayKey=()=>{const d=new Date();return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
+
+document.getElementById('dateBadge').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'long',day:'numeric',year:'numeric'});
+
+// ── Auto-fetch ────────────────────────────────────────────────────────────────
+async function fetchPicks(){
+  try{
+    const resp=await fetch(PICKS_URL+'?t='+Date.now());
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    ingest(await resp.json());
+  }catch(e){
+    console.warn('Fetch failed:',e.message);
+    document.getElementById('liveTag').classList.add('hidden');
+    const dk=todayKey();
+    const day=(load().days||{})[dk];
+    if(day){renderRecord();renderGames();}
+    else{
+      document.getElementById('gc').innerHTML='<div class="empty">⚠ Picks not loaded yet.<br><small style="color:var(--dim);font-size:11px;display:block;margin-top:6px">The engine runs at 8 AM Central. Use Load JSON tab to paste picks manually.</small></div>';
+    }
+  }
+}
+
+function ingest(data){
+  const store=load();
+  const dk=data.date||todayKey();
+  store.days=store.days||{};
+  store.days[dk]={label:fmtDate(dk),picks:data.picks||[]};
+  save(store);
+  document.getElementById('dateBadge').textContent=fmtDate(dk);
+  if(data.generated){const ts=new Date(data.generated);document.getElementById('genTime').textContent='Updated '+ts.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});}
+  const srcs=[...new Set((data.picks||[]).map(p=>p.projections?.odds_source).filter(Boolean))];
+  document.getElementById('oddsNote').textContent=srcs.length?'Odds: '+srcs.join(', ')+' · Auto-refreshes every 5 min':'Odds: FanDuel / DraftKings · Auto-refreshes every 5 min';
+  const hasLive=(data.picks||[]).some(p=>p.game_metadata?.status==='inprogress');
+  document.getElementById('liveTag').classList.toggle('hidden',!hasLive);
+  renderRecord();
+  if(curView==='today')renderGames();
+}
+
+function loadJSON(){
+  const txt=document.getElementById('jsonInput').value.trim();
+  const el=document.getElementById('lstat');
+  try{
+    const parsed=JSON.parse(txt);
+    if(!parsed.picks||!Array.isArray(parsed.picks))throw new Error('No picks array found');
+    ingest(parsed);
+    el.style.color='var(--green)';
+    el.textContent='✓ Loaded '+parsed.picks.length+' picks for '+(parsed.date||todayKey());
+    document.getElementById('jsonInput').value='';
+  }catch(ex){el.style.color='var(--red)';el.textContent='✗ '+ex.message;}
+}
+
+// ── Record bar ────────────────────────────────────────────────────────────────
+function calcStats(){
+  const store=load();let w=0,l=0,pend=0,profit=0;
+  Object.values(store.days||{}).forEach(day=>{
+    (day.picks||[]).forEach(p=>{
+      if(p.market_edge?.tier==='SKIP')return;
+      const r=store.results[p.game_metadata?.game_id]||null;
+      const ml=p.market_edge?.bet_side==='home'?p.projections?.market_home_ml:p.projections?.market_away_ml;
+      if(r==='W'){w++;profit+=pay(ml);}else if(r==='L'){l++;profit-=100;}else pend++;
+    });
+  });
+  return{w,l,pend,profit};
+}
+function renderRecord(){
+  const s=calcStats();
+  document.getElementById('rW').textContent=s.w;
+  document.getElementById('rL').textContent=s.l;
+  document.getElementById('rP').textContent=s.pend;
+  const t=s.w+s.l;
+  const pe=document.getElementById('rPct');
+  pe.textContent=t?Math.round(s.w/t*100)+'%':'—';
+  pe.className='rv '+(t?(s.w/t>=.5?'g':'r'):'');
+  const pp=document.getElementById('rProfit');
+  pp.textContent=(s.profit>=0?'+':'')+'\$'+Math.round(s.profit);
+  pp.className='rprofit '+(s.profit>=0?'g':'r');
+}
+
+// ── View / filter ─────────────────────────────────────────────────────────────
+let curFilter='all',curView='today',expDays={},expCards={};
+function showView(v,btn){curView=v;document.querySelectorAll('.ntab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.getElementById('viewToday').classList.toggle('hidden',v!=='today');document.getElementById('viewHistory').classList.toggle('hidden',v!=='history');document.getElementById('viewLoad').classList.toggle('hidden',v!=='load');if(v==='history')renderHistory();}
+function setFilter(f,btn){curFilter=f;document.querySelectorAll('.sbb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderGames();}
+function markR(id,r){setR(id,r);renderRecord();renderGames();}
+function unmarkR(id){setR(id,null);renderRecord();renderGames();}
+function histMark(id,r){setR(id,r);renderRecord();renderHistory();}
+function histUnmark(id){setR(id,null);renderRecord();renderHistory();}
+function toggleCard(id){expCards[id]=!expCards[id];renderGames();}
+function toggleDay(k){expDays[k]=!expDays[k];renderHistory();}
+
+// ── Render games ──────────────────────────────────────────────────────────────
+function renderGames(){
+  const dk=todayKey();
+  const day=(load().days||{})[dk];
+  const el=document.getElementById('gc');
+  if(!day?.picks?.length){el.innerHTML='<div class="empty">No picks for today yet.<br>The engine runs at 8 AM Central, or use Load JSON tab.</div>';return;}
+  let picks=[...day.picks];
+  if(curFilter==='best')picks=picks.filter(p=>['TOP','GOOD'].includes(p.market_edge?.tier));
+  if(curFilter==='value')picks=picks.filter(p=>{const ml=p.market_edge?.bet_side==='away'?p.projections?.market_away_ml:p.projections?.market_home_ml;return(ml||0)>0&&p.market_edge?.tier!=='SKIP';});
+  if(curFilter==='live')picks=picks.filter(p=>p.game_metadata?.status==='inprogress');
+  const to={TOP:0,GOOD:1,WATCH:2,SKIP:3};
+  picks.sort((a,b)=>(to[a.market_edge?.tier||'SKIP']||3)-(to[b.market_edge?.tier||'SKIP']||3)||b.market_edge?.ev_percent-a.market_edge?.ev_percent);
+  const sched=picks.filter(p=>p.game_metadata?.status==='scheduled');
+  const live=picks.filter(p=>p.game_metadata?.status==='inprogress');
+  const fin=picks.filter(p=>p.game_metadata?.status==='closed');
+  let html='';
+  if(sched.length){html+=`<div class="shdr">Upcoming <span class="scnt">${sched.length}</span></div>`;sched.forEach(p=>{html+=card(p);});}
+  if(live.length){html+=`<div class="shdr"><span class="ldot"></span> Live Now <span class="scnt">${live.length}</span></div>`;live.forEach(p=>{html+=card(p);});}
+  if(fin.length){html+=`<div class="shdr">Final Results <span class="scnt">${fin.length}</span></div>`;fin.forEach(p=>{html+=card(p);});}
+  if(!picks.length)html='<div class="empty">No games match this filter.</div>';
+  el.innerHTML=html;
+}
+
+function card(p){
+  const gm=p.game_metadata||{},me=p.market_edge||{},pr=p.projections||{},mx=p.math||{};
+  const id=gm.game_id,res=getR(id),isSkip=me.tier==='SKIP';
+  const isFin=gm.status==='closed',isLive=gm.status==='inprogress';
+  const betML=me.bet_side==='home'?pr.market_home_ml:pr.market_away_ml;
+  const payout=Math.round(pay(betML));
+  const conf=Math.min(Math.max(Math.round((me.ev_percent||0)*7+50),40),96);
+  const isExp=expCards[id];
+  const tl={TOP:'🔥 TOP PICK',GOOD:'✓ GOOD BET',WATCH:'👀 WATCH',SKIP:'✗ SKIP'};
+  let act='';
+  if(!isSkip){
+    if(res){act=`<span class="rpill rp${res}">${res==='W'?'✓ WON':'✗ LOST'}</span><button class="ubtn" onclick="unmarkR('${id}')">Undo</button>`;}
+    else if(isFin||isLive){act=`<button class="mkbtn mkw" onclick="markR('${id}','W')">✓ Win</button><button class="mkbtn mkl" onclick="markR('${id}','L')" style="margin-left:3px">✗ Loss</button>`;}
+  }
+  // Quick metric boxes
+  const metrics=[
+    {lbl:'SP ERA',av:pr.sp_away_era,hv:pr.sp_home_era,dir:'lower'},
+    {lbl:'Bullpen ERA',av:pr.a_bull_era,hv:pr.h_bull_era,dir:'lower'},
+    {lbl:'RPG L10',av:pr.away_rpg_l10,hv:pr.home_rpg_l10,dir:'higher'},
+    {lbl:'Home/Rd W%',av:pr.a_away_wr?Math.round(pr.a_away_wr*100)+'%':null,hv:pr.h_home_wr?Math.round(pr.h_home_wr*100)+'%':null,dir:'higher'},
+  ].filter(m=>m.av!=null&&m.hv!=null);
+  const mboxes=!isSkip&&metrics.length?`<div class="mrow">${metrics.map(m=>{const an=parseFloat(m.av),hn=parseFloat(m.hv);const ab=isNaN(an)||isNaN(hn)?false:(m.dir==='lower'?an<hn:an>hn);return`<div class="mbox"><div class="mlbl">${m.lbl}</div><div class="mcmp"><span class="${ab?'mbetter':'mworse'}">${gm.away}: ${m.av}</span><span class="mneutral">·</span><span class="${!ab?'mbetter':'mworse'}">${gm.home}: ${m.hv}</span></div></div>`;}).join('')}</div>`:'';
+  // Full stat grid (expanded)
+  const statRows=[
+    ['SP ERA',pr.sp_away_era,pr.sp_home_era,'lower'],
+    ['FIP',pr.sp_away_fip,pr.sp_home_fip,'lower'],
+    ['K/9',pr.sp_away_k9,pr.sp_home_k9,'higher'],
+    ['Bull ERA',pr.a_bull_era,pr.h_bull_era,'lower'],
+    ['RPG L10',pr.away_rpg_l10,pr.home_rpg_l10,'higher'],
+    ['Home/Rd W%',pr.a_away_wr?Math.round(pr.a_away_wr*100)+'%':null,pr.h_home_wr?Math.round(pr.h_home_wr*100)+'%':null,'higher'],
+  ].filter(([,a,h])=>a!=null&&h!=null);
+  const sgrid=statRows.map(([lbl,av,hv,dir])=>{const an=parseFloat(av),hn=parseFloat(hv);const ab=isNaN(an)||isNaN(hn)?false:(dir==='lower'?an<hn:an>hn);return`<div class="scell"><div class="sclbl">${lbl}</div><div class="scv"><span class="${ab?'scbetter':'scworse'}">${gm.away}: ${av}</span><span class="${!ab?'scbetter':'scworse'}">${gm.home}: ${hv}</span></div></div>`;}).join('');
+  // Component bars
+  const propW=mx.prop?.weighted??mx.prop_weighted??null;
+  const pitchW=mx.pitch?.weighted??mx.pitch_weighted??null;
+  const offW=mx.off?.weighted??mx.off_weighted??null;
+  const ctxW=mx.ctx?.weighted??mx.ctx_weighted??null;
+  const fatH=mx.fat_home??mx.fat_h??0;
+  const fatA=mx.fat_away??mx.fat_a??0;
+  const comps=[['Proprietary',propW,0.12],['Pitch',pitchW,0.09],['Offense',offW,0.05],['Contextual',ctxW,0.025],['Fatigue Δ',fatA-fatH,0.04]];
+  const cbars=comps.map(([lbl,val,sc])=>{if(val==null)return'';const pct=Math.min(Math.abs(val/(sc||.01))*100,100);const pos=val>=0;return`<div class="crow"><span class="clbl">${lbl}</span><div class="cbw"><div class="cfill2 ${pos?'cpos':'cneg'}" style="width:${pct}%"></div></div><span class="cval" style="color:${pos?'var(--green)':'var(--red)'}">${pos?'+':''}${(val*100).toFixed(1)}%</span></div>`;}).join('');
+  // Math block
+  const fp=mx.final_home_p??mx.pre_fat_p??null;
+  const mp=mx.mkt_home_p??(pr.market_home_p||null);
+  const math=fp!=null?`<div class="mathbox"><b>${gm.home} perspective: Fair vs Market</b><br>Fair Win% → <b>${(fp*100).toFixed(1)}%</b> | Fair ML → <b>${pr.fair_home_ml??pr.fair_odds_home??'—'}</b><br>Market Implied → <b>${mp?(mp*100).toFixed(1)+'%':'N/A'}</b> | Market ML → <b>${fmtML(pr.market_home_ml)}</b><br>EV → <b style="color:var(--gold)">${me.ev_percent>0?'+':''}${me.ev_percent}%</b> | Kelly (¼) → <b>${me.kelly_stake}</b><br>Park Factor → <b>${mx.park_factor??gm.park_factor??'—'}x</b> | Ump Bias → <b>${mx.ump_bias!=null?(mx.ump_bias>=0?'+':'')+mx.ump_bias:'—'}</b><br>${gm.home} Home W% → <b>${mx.h_home_wr?Math.round(mx.h_home_wr*100)+'%':'—'}</b> | ${gm.away} Road W% → <b>${mx.a_away_wr?Math.round(mx.a_away_wr*100)+'%':'—'}</b></div>`:'';
+
+  return`<div class="card ${me.tier||'SKIP'}">
+  <div class="ctop">
+    <div class="cbadges">
+      <span class="badge b${me.tier||'SKIP'}">${tl[me.tier]||me.tier}</span>
+      ${isLive?`<span class="badge bLIVE">● LIVE</span>`:''}
+      ${isFin?`<span class="badge bFINAL">FINAL</span>`:''}
+      ${gm.score&&gm.score!=='Scheduled'?`<span class="cscore">${gm.score}</span>`:''}
+    </div>
+    <div class="cacts">${act}${!isSkip?`<button class="xbtn" onclick="toggleCard('${id}')">${isExp?'▲ Less':'▼ Stats'}</button>`:''}</div>
+  </div>
+  <div class="spline">${gm.away_sp||'?'} vs ${gm.home_sp||'?'}${gm.park_factor?' · Park: '+gm.park_factor+'x':''}</div>
+  <div class="matchup">
+    <span class="tname">${gm.away}</span>
+    <span class="mlp ${impl(pr.market_away_ml)<.5?'mldog':'mlfav'}">${fmtML(pr.market_away_ml)}</span>
+    <span class="atsym">@</span>
+    <span class="tname">${gm.home}</span>
+    <span class="mlp ${impl(pr.market_home_ml)<.5?'mldog':'mlfav'}">${fmtML(pr.market_home_ml)}</span>
+    ${!pr.market_home_ml?`<span class="noml">No odds yet</span>`:''}
+  </div>
+  ${!isSkip?`
+  <div class="pickbar">
+    <span class="pkl">Pick</span>
+    <span class="pkt">${me.bet_side==='home'?gm.home:gm.away}</span>
+    <span class="pkml">${fmtML(betML)}</span>
+    <span class="evtag">+${me.ev_percent}% EV</span>
+    <span class="ktag">Kelly ${me.kelly_stake}</span>
+  </div>
+  <div class="cbar"><div class="cfill" style="width:${conf}%"></div></div>
+  <div class="prow"><span>$100 bet → <b>+$${payout}</b></span><span>Fair: ${pr.fair_home_p?(pr.fair_home_p*100).toFixed(1)+'%':'—'} vs Mkt: ${pr.market_home_p?(pr.market_home_p*100).toFixed(1)+'%':'N/A'} | Total: ${pr.projected_total??'—'}</span></div>
+  ${me.f5_best_bet||me.f5_bet?`<div class="sigs"><span class="sig f5sig">⏱ ${me.f5_best_bet||me.f5_bet}</span></div>`:''}
+  ${me.signals?.length?`<div class="sigs">${me.signals.map(s=>`<span class="sig">${s}</span>`).join('')}</div>`:''}
+  ${mboxes}
+  <div class="xpanel ${isExp?'open':''}">
+    <div class="xlabel" style="margin-bottom:5px">Full Stat Comparison</div>
+    <div class="sgrid">${sgrid}</div>
+    <div class="xlabel" style="margin-bottom:5px">Component Breakdown</div>
+    ${cbars}${math}
+  </div>`:''}
+</div>`;
+}
+
+// ── Render history ────────────────────────────────────────────────────────────
+function renderHistory(){
+  const store=load();
+  const allDays=Object.keys(store.days||{}).sort((a,b)=>b.localeCompare(a));
+  const dk=todayKey();
+  const el=document.getElementById('hc');
+  if(!allDays.length){el.innerHTML='<div class="empty">No history yet.<br>Mark results on Today\'s Picks to start tracking.</div>';return;}
+  el.innerHTML=allDays.map(k=>{
+    const day=store.days[k],isToday=k===dk,isOpen=expDays[k];
+    const picks=(day.picks||[]).filter(p=>p.market_edge?.tier!=='SKIP');
+    let w=0,l=0,pend=0,profit=0;
+    picks.forEach(p=>{const id=p.game_metadata?.game_id,r=store.results[id]||null;const ml=p.market_edge?.bet_side==='home'?p.projections?.market_home_ml:p.projections?.market_away_ml;if(r==='W'){w++;profit+=pay(ml);}else if(r==='L'){l++;profit-=100;}else pend++;});
+    const profStr=(profit>=0?'+':'')+'\$'+Math.round(profit);
+    const t=w+l,winPct=t?Math.round(w/t*100)+'%':'—';
+    const rows=isOpen?`<div class="hbody"><div class="hdbar"><span class="g">${w}W</span><span class="r">${l}L</span>${pend?`<span class="y">${pend} pending</span>`:''}<span style="color:var(--muted)">· Win%: ${winPct} · <span style="color:${profit>=0?'var(--green)':'var(--red)'}">${profStr}</span></span></div>${picks.map(p=>{const id=p.game_metadata?.game_id,gm=p.game_metadata,me=p.market_edge,pr=p.projections,r=store.results[id]||null;const betML=me?.bet_side==='home'?pr?.market_home_ml:pr?.market_away_ml;const pp=Math.round(pay(betML));const ps=r==='W'?'+\$'+pp:r==='L'?'-\$100':'Pending';const pc=r==='W'?'var(--green)':r==='L'?'var(--red)':'var(--dim)';const btns=r?`<span class="rpill rp${r}">${r==='W'?'✓ W':'✗ L'}</span><button class="hundo" onclick="histUnmark('${id}')">Undo</button>`:`<button class="hmw" onclick="histMark('${id}','W')">W</button><button class="hml2" onclick="histMark('${id}','L')" style="margin-left:3px">L</button>`;return`<div class="hgrow"><span class="hbadge b${me?.tier||'SKIP'}">${me?.tier}</span><span class="hmatch">${gm?.away}@${gm?.home}</span><span class="hpick">${me?.best_bet||'—'}</span><span class="hsc">${gm?.score||'—'}</span><span class="hprof" style="color:${pc}">${ps}</span>${btns}</div>`;}).join('')}</div>`:'';
+    return`<div class="hday"><div class="hhdr" onclick="toggleDay('${k}')"><div class="hdate">${day.label||fmtDate(k)} ${isToday?'<span class="todpip">TODAY</span>':''}</div><div class="hright"><span class="g">${w}W</span><span class="r">${l}L</span>${pend?`<span class="y">${pend}?</span>`:''}<span style="color:${profit>=0?'var(--green)':'var(--red)'}">${profStr}</span><span class="hchev ${isOpen?'open':''}">▼</span></div></div>${rows}</div>`;
+  }).join('');
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+renderRecord();
+fetchPicks();
+setInterval(fetchPicks,POLL_MS);
+</script>
+</body>
+</html>
