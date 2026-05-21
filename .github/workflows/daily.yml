@@ -1,0 +1,48 @@
+name: DiamondEdge Daily Engine
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+    - cron: '30 17 * * *'
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date override (YYYY-MM-DD)'
+        required: false
+        default: ''
+
+jobs:
+  run-engine:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run engine
+        env:
+          ODDS_API_KEY:    ${{ secrets.ODDS_API_KEY }}
+          OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+        run: |
+          DATE="${{ github.event.inputs.date }}"
+          if [ -z "$DATE" ]; then DATE=$(date -u +%Y-%m-%d); fi
+          python engine/run.py "$DATE"
+
+      - name: Commit picks.json
+        run: |
+          git config user.name "DiamondEdge Bot"
+          git config user.email "bot@diamondedge.app"
+          git add picks.json
+          git diff --cached --quiet || git commit -m "picks: $(date -u +%Y-%m-%d-%H%M)"
+          git push
