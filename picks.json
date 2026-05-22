@@ -1,8 +1,8 @@
 {
   "date": "2026-05-22",
   "run_type": "full",
-  "generated": "2026-05-22T19:17:32.832509Z",
-  "game_count": 14,
+  "generated": "2026-05-22T21:47:49.544012Z",
+  "game_count": 13,
   "model": {
     "version": "v3.0",
     "sources": [
@@ -39,10 +39,10 @@
         "venue": "Citizens Bank Park",
         "park_factor": 0.993,
         "weather": {
-          "temp_f": 64.3,
-          "wind_mph": 13.8,
-          "wind_dir": "E",
-          "condition": "Clouds"
+          "temp_f": 58.4,
+          "wind_mph": 2.0,
+          "wind_dir": "NE",
+          "condition": "Rain"
         },
         "umpire": "Junior Valentine",
         "lineup_confirmed": true,
@@ -55,9 +55,9 @@
         "fair_home_p": 0.511,
         "fair_away_p": 0.489,
         "fair_f5_p": 0.505,
-        "proj_total": 9.1,
-        "home_proj_runs": 4.57,
-        "away_proj_runs": 4.57,
+        "proj_total": 8.4,
+        "home_proj_runs": 4.22,
+        "away_proj_runs": 4.22,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -88,7 +88,7 @@
         "tier": "TOP",
         "bet_side": "away",
         "signals": [
-          "WIND_13.8mph_E",
+          "RAIN_RISK",
           "SP_PHI_PROVISIONAL",
           "SP_CLE_PROVISIONAL"
         ]
@@ -109,89 +109,6 @@
     },
     {
       "game_metadata": {
-        "game_id": "2026-05-22-WSH-ATL",
-        "game_pk": "824922",
-        "home": "ATL",
-        "away": "WSH",
-        "home_full": "Atlanta Braves",
-        "away_full": "Washington Nationals",
-        "home_sp": "TBD",
-        "away_sp": "Miles Mikolas",
-        "start_time": "2026-05-22T23:15:00Z",
-        "venue": "Truist Park",
-        "park_factor": 1.067,
-        "weather": {
-          "temp_f": 84.3,
-          "wind_mph": 13.8,
-          "wind_dir": "S",
-          "condition": "Clouds"
-        },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled"
-      },
-      "projections": {
-        "fair_home_ml": -119,
-        "fair_away_ml": 119,
-        "fair_home_p": 0.543,
-        "fair_away_p": 0.457,
-        "fair_f5_p": 0.521,
-        "proj_total": 9.6,
-        "home_proj_runs": 4.78,
-        "away_proj_runs": 4.78,
-        "home_woba": 0.318,
-        "away_woba": 0.318,
-        "sp_home_era": 4.5,
-        "sp_away_era": 4.5,
-        "sp_home_fip": 4.5,
-        "sp_away_fip": 4.5,
-        "sp_home_k9": 8.0,
-        "sp_away_k9": 8.0,
-        "sp_home_stuff": 100,
-        "sp_away_stuff": 100,
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_home_wr": 0.61,
-        "a_away_wr": 0.435,
-        "ump_bias": 0.0,
-        "park_fac": 1.067,
-        "market_home_ml": -219,
-        "market_away_ml": 178,
-        "market_home_p": 0.656,
-        "market_away_p": 0.344,
-        "odds_source": "DraftKings"
-      },
-      "market_edge": {
-        "best_bet": "WSH ML +178",
-        "f5_bet": "F5: WSH \u2014 edge stronger before bullpen",
-        "ev_percent": 11.3,
-        "kelly_stake": "3.8%",
-        "tier": "TOP",
-        "bet_side": "away",
-        "signals": [
-          "LINEUP_UNCONFIRMED",
-          "WIND_13.8mph_S",
-          "SP_ATL_PROVISIONAL",
-          "SP_WSH_PROVISIONAL"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.5,
-        "prop_adj": 0.0429,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5429,
-        "mkt_home_p": 0.6562,
-        "h_home_wr": 0.61,
-        "a_away_wr": 0.435,
-        "park_factor": 1.067,
-        "ump_bias": 0.0
-      }
-    },
-    {
-      "game_metadata": {
         "game_id": "2026-05-22-PIT-TOR",
         "game_pk": "822816",
         "home": "TOR",
@@ -204,13 +121,13 @@
         "venue": "Rogers Centre",
         "park_factor": 1.042,
         "weather": {
-          "temp_f": 60.1,
-          "wind_mph": 11.5,
+          "temp_f": 58.9,
+          "wind_mph": 16.1,
           "wind_dir": "E",
           "condition": "Clouds"
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Alex MacKay",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled"
       },
@@ -220,9 +137,9 @@
         "fair_home_p": 0.522,
         "fair_away_p": 0.478,
         "fair_f5_p": 0.511,
-        "proj_total": 9.4,
-        "home_proj_runs": 4.72,
-        "away_proj_runs": 4.72,
+        "proj_total": 9.5,
+        "home_proj_runs": 4.77,
+        "away_proj_runs": 4.77,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -253,8 +170,7 @@
         "tier": "TOP",
         "bet_side": "home",
         "signals": [
-          "LINEUP_UNCONFIRMED",
-          "WIND_11.5mph_E",
+          "WIND_16.1mph_E",
           "SP_TOR_PROVISIONAL",
           "SP_PIT_PROVISIONAL"
         ]
@@ -275,6 +191,88 @@
     },
     {
       "game_metadata": {
+        "game_id": "2026-05-22-WSH-ATL",
+        "game_pk": "824922",
+        "home": "ATL",
+        "away": "WSH",
+        "home_full": "Atlanta Braves",
+        "away_full": "Washington Nationals",
+        "home_sp": "Bryce Elder",
+        "away_sp": "Richard Lovelady",
+        "start_time": "2026-05-22T23:15:00Z",
+        "venue": "Truist Park",
+        "park_factor": 1.067,
+        "weather": {
+          "temp_f": 73.8,
+          "wind_mph": 5.8,
+          "wind_dir": "S",
+          "condition": "Rain"
+        },
+        "umpire": "Tom Hanahan",
+        "lineup_confirmed": true,
+        "status": "scheduled",
+        "score": "Scheduled"
+      },
+      "projections": {
+        "fair_home_ml": -119,
+        "fair_away_ml": 119,
+        "fair_home_p": 0.543,
+        "fair_away_p": 0.457,
+        "fair_f5_p": 0.521,
+        "proj_total": 9.3,
+        "home_proj_runs": 4.67,
+        "away_proj_runs": 4.67,
+        "home_woba": 0.318,
+        "away_woba": 0.318,
+        "sp_home_era": 4.5,
+        "sp_away_era": 4.5,
+        "sp_home_fip": 4.5,
+        "sp_away_fip": 4.5,
+        "sp_home_k9": 8.0,
+        "sp_away_k9": 8.0,
+        "sp_home_stuff": 100,
+        "sp_away_stuff": 100,
+        "h_bull_tax": 0.0,
+        "a_bull_tax": 0.0,
+        "h_home_wr": 0.61,
+        "a_away_wr": 0.435,
+        "ump_bias": 0.0,
+        "park_fac": 1.067,
+        "market_home_ml": -184,
+        "market_away_ml": 154,
+        "market_home_p": 0.622,
+        "market_away_p": 0.378,
+        "odds_source": "FanDuel"
+      },
+      "market_edge": {
+        "best_bet": "WSH ML +154",
+        "f5_bet": "F5: WSH \u2014 edge stronger before bullpen",
+        "ev_percent": 7.9,
+        "kelly_stake": "2.6%",
+        "tier": "TOP",
+        "bet_side": "away",
+        "signals": [
+          "RAIN_RISK",
+          "SP_ATL_PROVISIONAL",
+          "SP_WSH_PROVISIONAL"
+        ]
+      },
+      "math": {
+        "base_pyth_p": 0.5,
+        "prop_adj": 0.0429,
+        "ump_adj": 0.0,
+        "h_fatigue_tax": 0.0,
+        "a_fatigue_tax": 0.0,
+        "final_home_p": 0.5429,
+        "mkt_home_p": 0.622,
+        "h_home_wr": 0.61,
+        "a_away_wr": 0.435,
+        "park_factor": 1.067,
+        "ump_bias": 0.0
+      }
+    },
+    {
+      "game_metadata": {
         "game_id": "2026-05-22-MIN-BOS",
         "game_pk": "824761",
         "home": "BOS",
@@ -287,9 +285,9 @@
         "venue": "Fenway Park",
         "park_factor": 1.136,
         "weather": {
-          "temp_f": 62.8,
-          "wind_mph": 5.8,
-          "wind_dir": "N",
+          "temp_f": 61.9,
+          "wind_mph": 4,
+          "wind_dir": "SE",
           "condition": "Clear"
         },
         "umpire": "Ryan Wills",
@@ -304,8 +302,8 @@
         "fair_away_p": 0.499,
         "fair_f5_p": 0.501,
         "proj_total": 10.0,
-        "home_proj_runs": 5.02,
-        "away_proj_runs": 5.02,
+        "home_proj_runs": 5.01,
+        "away_proj_runs": 5.01,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -322,17 +320,17 @@
         "a_away_wr": 0.455,
         "ump_bias": 0.0,
         "park_fac": 1.136,
-        "market_home_ml": -154,
-        "market_away_ml": 130,
-        "market_home_p": 0.582,
-        "market_away_p": 0.418,
+        "market_home_ml": -148,
+        "market_away_ml": 126,
+        "market_home_p": 0.574,
+        "market_away_p": 0.426,
         "odds_source": "FanDuel"
       },
       "market_edge": {
-        "best_bet": "MIN ML +130",
+        "best_bet": "MIN ML +126",
         "f5_bet": null,
-        "ev_percent": 8.1,
-        "kelly_stake": "2.8%",
+        "ev_percent": 7.3,
+        "kelly_stake": "2.5%",
         "tier": "TOP",
         "bet_side": "away",
         "signals": [
@@ -348,176 +346,10 @@
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
         "final_home_p": 0.5011,
-        "mkt_home_p": 0.5824,
+        "mkt_home_p": 0.5742,
         "h_home_wr": 0.526,
         "a_away_wr": 0.455,
         "park_factor": 1.136,
-        "ump_bias": 0.0
-      }
-    },
-    {
-      "game_metadata": {
-        "game_id": "2026-05-22-HOU-CHC",
-        "game_pk": "824679",
-        "home": "CHC",
-        "away": "HOU",
-        "home_full": "Chicago Cubs",
-        "away_full": "Houston Astros",
-        "home_sp": "Jameson Taillon",
-        "away_sp": "Spencer Arrighetti",
-        "start_time": "2026-05-22T18:20:00Z",
-        "venue": "Wrigley Field",
-        "park_factor": 1.0,
-        "weather": {
-          "temp_f": 61.4,
-          "wind_mph": 15.0,
-          "wind_dir": "NE",
-          "condition": "Clouds"
-        },
-        "umpire": "Chad Fairchild",
-        "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled"
-      },
-      "projections": {
-        "fair_home_ml": 106,
-        "fair_away_ml": -106,
-        "fair_home_p": 0.485,
-        "fair_away_p": 0.515,
-        "fair_f5_p": 0.492,
-        "proj_total": 9.4,
-        "home_proj_runs": 4.7,
-        "away_proj_runs": 4.7,
-        "home_woba": 0.318,
-        "away_woba": 0.318,
-        "sp_home_era": 4.5,
-        "sp_away_era": 4.5,
-        "sp_home_fip": 4.5,
-        "sp_away_fip": 4.5,
-        "sp_home_k9": 8.0,
-        "sp_away_k9": 8.0,
-        "sp_home_stuff": 100,
-        "sp_away_stuff": 100,
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_home_wr": 0.623,
-        "a_away_wr": 0.593,
-        "ump_bias": 0.0,
-        "park_fac": 1.0,
-        "market_home_ml": -142,
-        "market_away_ml": 120,
-        "market_home_p": 0.563,
-        "market_away_p": 0.437,
-        "odds_source": "FanDuel"
-      },
-      "market_edge": {
-        "best_bet": "HOU ML +120",
-        "f5_bet": null,
-        "ev_percent": 7.9,
-        "kelly_stake": "2.8%",
-        "tier": "TOP",
-        "bet_side": "away",
-        "signals": [
-          "WIND_15.0mph_NE",
-          "SP_CHC_PROVISIONAL",
-          "SP_HOU_PROVISIONAL"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.5,
-        "prop_adj": -0.0152,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4848,
-        "mkt_home_p": 0.5635,
-        "h_home_wr": 0.623,
-        "a_away_wr": 0.593,
-        "park_factor": 1.0,
-        "ump_bias": 0.0
-      }
-    },
-    {
-      "game_metadata": {
-        "game_id": "2026-05-22-TB-NYY",
-        "game_pk": "823546",
-        "home": "NYY",
-        "away": "TB",
-        "home_full": "New York Yankees",
-        "away_full": "Tampa Bay Rays",
-        "home_sp": "Gerrit Cole",
-        "away_sp": "Nick Martinez",
-        "start_time": "2026-05-22T23:05:00Z",
-        "venue": "Yankee Stadium",
-        "park_factor": 0.905,
-        "weather": {
-          "temp_f": 67.1,
-          "wind_mph": 17.3,
-          "wind_dir": "NE",
-          "condition": "Clear"
-        },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled"
-      },
-      "projections": {
-        "fair_home_ml": -106,
-        "fair_away_ml": 106,
-        "fair_home_p": 0.514,
-        "fair_away_p": 0.486,
-        "fair_f5_p": 0.507,
-        "proj_total": 8.5,
-        "home_proj_runs": 4.25,
-        "away_proj_runs": 4.25,
-        "home_woba": 0.318,
-        "away_woba": 0.318,
-        "sp_home_era": 4.5,
-        "sp_away_era": 4.5,
-        "sp_home_fip": 4.5,
-        "sp_away_fip": 4.5,
-        "sp_home_k9": 8.0,
-        "sp_away_k9": 8.0,
-        "sp_home_stuff": 100,
-        "sp_away_stuff": 100,
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_home_wr": 0.624,
-        "a_away_wr": 0.521,
-        "ump_bias": 0.0,
-        "park_fac": 0.905,
-        "market_home_ml": -154,
-        "market_away_ml": 130,
-        "market_home_p": 0.582,
-        "market_away_p": 0.418,
-        "odds_source": "FanDuel"
-      },
-      "market_edge": {
-        "best_bet": "TB ML +130",
-        "f5_bet": null,
-        "ev_percent": 6.8,
-        "kelly_stake": "2.3%",
-        "tier": "GOOD",
-        "bet_side": "away",
-        "signals": [
-          "LINEUP_UNCONFIRMED",
-          "PITCHERS_PARK",
-          "WIND_17.3mph_NE",
-          "SP_NYY_PROVISIONAL",
-          "SP_TB_PROVISIONAL"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.5,
-        "prop_adj": 0.014,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.514,
-        "mkt_home_p": 0.5824,
-        "h_home_wr": 0.624,
-        "a_away_wr": 0.521,
-        "park_factor": 0.905,
         "ump_bias": 0.0
       }
     },
@@ -605,6 +437,88 @@
     },
     {
       "game_metadata": {
+        "game_id": "2026-05-22-TB-NYY",
+        "game_pk": "823546",
+        "home": "NYY",
+        "away": "TB",
+        "home_full": "New York Yankees",
+        "away_full": "Tampa Bay Rays",
+        "home_sp": "Gerrit Cole",
+        "away_sp": "Nick Martinez",
+        "start_time": "2026-05-22T23:05:00Z",
+        "venue": "Yankee Stadium",
+        "park_factor": 0.905,
+        "weather": {
+          "temp_f": 64.1,
+          "wind_mph": 9.2,
+          "wind_dir": "SE",
+          "condition": "Clear"
+        },
+        "umpire": "Emil Jimenez",
+        "lineup_confirmed": true,
+        "status": "scheduled",
+        "score": "Scheduled"
+      },
+      "projections": {
+        "fair_home_ml": -106,
+        "fair_away_ml": 106,
+        "fair_home_p": 0.514,
+        "fair_away_p": 0.486,
+        "fair_f5_p": 0.507,
+        "proj_total": 7.8,
+        "home_proj_runs": 3.91,
+        "away_proj_runs": 3.91,
+        "home_woba": 0.318,
+        "away_woba": 0.318,
+        "sp_home_era": 4.5,
+        "sp_away_era": 4.5,
+        "sp_home_fip": 4.5,
+        "sp_away_fip": 4.5,
+        "sp_home_k9": 8.0,
+        "sp_away_k9": 8.0,
+        "sp_home_stuff": 100,
+        "sp_away_stuff": 100,
+        "h_bull_tax": 0.0,
+        "a_bull_tax": 0.0,
+        "h_home_wr": 0.624,
+        "a_away_wr": 0.521,
+        "ump_bias": 0.0,
+        "park_fac": 0.905,
+        "market_home_ml": -146,
+        "market_away_ml": 124,
+        "market_home_p": 0.571,
+        "market_away_p": 0.429,
+        "odds_source": "FanDuel"
+      },
+      "market_edge": {
+        "best_bet": "TB ML +124",
+        "f5_bet": null,
+        "ev_percent": 5.7,
+        "kelly_stake": "1.8%",
+        "tier": "GOOD",
+        "bet_side": "away",
+        "signals": [
+          "PITCHERS_PARK",
+          "SP_NYY_PROVISIONAL",
+          "SP_TB_PROVISIONAL"
+        ]
+      },
+      "math": {
+        "base_pyth_p": 0.5,
+        "prop_adj": 0.014,
+        "ump_adj": 0.0,
+        "h_fatigue_tax": 0.0,
+        "a_fatigue_tax": 0.0,
+        "final_home_p": 0.514,
+        "mkt_home_p": 0.5707,
+        "h_home_wr": 0.624,
+        "a_away_wr": 0.521,
+        "park_factor": 0.905,
+        "ump_bias": 0.0
+      }
+    },
+    {
+      "game_metadata": {
         "game_id": "2026-05-22-NYM-MIA",
         "game_pk": "823863",
         "home": "MIA",
@@ -617,13 +531,13 @@
         "venue": "loanDepot park",
         "park_factor": 0.939,
         "weather": {
-          "temp_f": 87.3,
-          "wind_mph": 16.1,
-          "wind_dir": "E",
-          "condition": "Rain"
+          "temp_f": 83.3,
+          "wind_mph": 17.3,
+          "wind_dir": "SE",
+          "condition": "Clouds"
         },
-        "umpire": "HP Umpire",
-        "lineup_confirmed": false,
+        "umpire": "Cory Blaser",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled"
       },
@@ -633,9 +547,9 @@
         "fair_home_p": 0.461,
         "fair_away_p": 0.539,
         "fair_f5_p": 0.481,
-        "proj_total": 8.8,
-        "home_proj_runs": 4.42,
-        "away_proj_runs": 4.42,
+        "proj_total": 8.3,
+        "home_proj_runs": 4.14,
+        "away_proj_runs": 4.14,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -666,10 +580,7 @@
         "tier": "GOOD",
         "bet_side": "away",
         "signals": [
-          "LINEUP_UNCONFIRMED",
-          "WIND_16.1mph_E",
-          "HOT_WEATHER",
-          "RAIN_RISK",
+          "WIND_17.3mph_SE",
           "SP_MIA_PROVISIONAL",
           "SP_NYM_PROVISIONAL"
         ]
@@ -702,13 +613,13 @@
         "venue": "Oriole Park at Camden Yards",
         "park_factor": 1.051,
         "weather": {
-          "temp_f": 57.3,
-          "wind_mph": 13.8,
+          "temp_f": 56.1,
+          "wind_mph": 12.7,
           "wind_dir": "E",
-          "condition": "Rain"
+          "condition": "Clouds"
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Mike Estabrook",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled"
       },
@@ -718,9 +629,9 @@
         "fair_home_p": 0.502,
         "fair_away_p": 0.498,
         "fair_f5_p": 0.501,
-        "proj_total": 9.3,
-        "home_proj_runs": 4.63,
-        "away_proj_runs": 4.63,
+        "proj_total": 9.5,
+        "home_proj_runs": 4.74,
+        "away_proj_runs": 4.74,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -751,9 +662,7 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
-          "WIND_13.8mph_E",
-          "RAIN_RISK",
+          "WIND_12.7mph_E",
           "SP_BAL_PROVISIONAL",
           "SP_DET_PROVISIONAL"
         ]
@@ -786,13 +695,13 @@
         "venue": "Kauffman Stadium",
         "park_factor": 1.0,
         "weather": {
-          "temp_f": 64.8,
+          "temp_f": 69.0,
           "wind_mph": 6.9,
           "wind_dir": "E",
           "condition": "Clouds"
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Adam Hamari",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled"
       },
@@ -803,8 +712,8 @@
         "fair_away_p": 0.549,
         "fair_f5_p": 0.475,
         "proj_total": 8.9,
-        "home_proj_runs": 4.44,
-        "away_proj_runs": 4.44,
+        "home_proj_runs": 4.47,
+        "away_proj_runs": 4.47,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -835,7 +744,6 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
           "SP_KC_PROVISIONAL",
           "SP_SEA_PROVISIONAL"
         ]
@@ -868,13 +776,13 @@
         "venue": "American Family Field",
         "park_factor": 1.003,
         "weather": {
-          "temp_f": 62.4,
-          "wind_mph": 10.4,
-          "wind_dir": "E",
-          "condition": "Clouds"
+          "temp_f": 63.0,
+          "wind_mph": 8.1,
+          "wind_dir": "NE",
+          "condition": "Clear"
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Nick Mahrley",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled"
       },
@@ -885,8 +793,8 @@
         "fair_away_p": 0.539,
         "fair_f5_p": 0.481,
         "proj_total": 9.1,
-        "home_proj_runs": 4.55,
-        "away_proj_runs": 4.55,
+        "home_proj_runs": 4.53,
+        "away_proj_runs": 4.53,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -917,8 +825,6 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
-          "WIND_10.4mph_E",
           "SP_MIL_PROVISIONAL",
           "SP_LAD_PROVISIONAL"
         ]
@@ -951,10 +857,10 @@
         "venue": "Angel Stadium",
         "park_factor": 1.0,
         "weather": {
-          "temp_f": 72.2,
-          "wind_mph": 10.4,
+          "temp_f": 73.0,
+          "wind_mph": 13.8,
           "wind_dir": "S",
-          "condition": "Haze"
+          "condition": "Clear"
         },
         "umpire": "TBD",
         "lineup_confirmed": false,
@@ -967,9 +873,9 @@
         "fair_home_p": 0.489,
         "fair_away_p": 0.511,
         "fair_f5_p": 0.494,
-        "proj_total": 8.8,
-        "home_proj_runs": 4.4,
-        "away_proj_runs": 4.4,
+        "proj_total": 8.7,
+        "home_proj_runs": 4.37,
+        "away_proj_runs": 4.37,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -1001,7 +907,7 @@
         "bet_side": null,
         "signals": [
           "LINEUP_UNCONFIRMED",
-          "WIND_10.4mph_S",
+          "WIND_13.8mph_S",
           "SP_LAA_PROVISIONAL",
           "SP_TEX_PROVISIONAL"
         ]
@@ -1034,12 +940,12 @@
         "venue": "Petco Park",
         "park_factor": 0.893,
         "weather": {
-          "temp_f": 70.3,
-          "wind_mph": 10.4,
-          "wind_dir": "SW",
+          "temp_f": 70.5,
+          "wind_mph": 12.7,
+          "wind_dir": "W",
           "condition": "Clouds"
         },
-        "umpire": "TBD",
+        "umpire": "Malachi Moore",
         "lineup_confirmed": false,
         "status": "scheduled",
         "score": "Scheduled"
@@ -1051,8 +957,8 @@
         "fair_away_p": 0.484,
         "fair_f5_p": 0.508,
         "proj_total": 7.8,
-        "home_proj_runs": 3.9,
-        "away_proj_runs": 3.9,
+        "home_proj_runs": 3.88,
+        "away_proj_runs": 3.88,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -1085,7 +991,7 @@
         "signals": [
           "LINEUP_UNCONFIRMED",
           "PITCHERS_PARK",
-          "WIND_10.4mph_SW",
+          "WIND_12.7mph_W",
           "SP_SD_PROVISIONAL",
           "SP_ATH_PROVISIONAL"
         ]
@@ -1118,9 +1024,9 @@
         "venue": "Oracle Park",
         "park_factor": 0.889,
         "weather": {
-          "temp_f": 62.4,
-          "wind_mph": 8.0,
-          "wind_dir": "SW",
+          "temp_f": 62.7,
+          "wind_mph": 16.1,
+          "wind_dir": "W",
           "condition": "Clouds"
         },
         "umpire": "TBD",
@@ -1134,9 +1040,9 @@
         "fair_home_p": 0.525,
         "fair_away_p": 0.475,
         "fair_f5_p": 0.513,
-        "proj_total": 7.8,
-        "home_proj_runs": 3.92,
-        "away_proj_runs": 3.92,
+        "proj_total": 7.5,
+        "home_proj_runs": 3.76,
+        "away_proj_runs": 3.76,
         "home_woba": 0.318,
         "away_woba": 0.318,
         "sp_home_era": 4.5,
@@ -1169,6 +1075,7 @@
         "signals": [
           "LINEUP_UNCONFIRMED",
           "PITCHERS_PARK",
+          "WIND_16.1mph_W",
           "SP_SF_PROVISIONAL",
           "SP_CWS_PROVISIONAL"
         ]
