@@ -1,0 +1,59 @@
+name: DiamondEdge Daily Engine
+
+on:
+  schedule:
+    - cron: '0 13 * * *'
+    - cron: '30 17 * * *'
+    - cron: '30 23 * * *'
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date (YYYY-MM-DD, blank = today)'
+        required: false
+        default: ''
+      run_type:
+        description: 'Run type: full or results'
+        required: false
+        default: 'full'
+
+jobs:
+  run-engine:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run engine
+        env:
+          ODDS_API_KEY:    ${{ secrets.ODDS_API_KEY }}
+          OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
+        run: |
+          DATE="${{ github.event.inputs.date }}"
+          TYPE="${{ github.event.inputs.run_type }}"
+          if [ -z "$DATE" ]; then DATE=$(date -u +%Y-%m-%d); fi
+          if [ -z "$TYPE" ]; then
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" = "05" ]; then TYPE="results"; else TYPE="full"; fi
+          fi
+          echo "Running $TYPE for $DATE"
+          python engine/run.py "$DATE" "$TYPE"
+
+      - name: Commit picks.json
+        run: |
+          git config user.name "DiamondEdge Bot"
+          git config user.email "bot@diamondedge.app"
+          git add picks.json
+          git diff --cached --quiet || git commit -m "picks: $(date -u +%Y-%m-%d-%H%M)"
+          git push
