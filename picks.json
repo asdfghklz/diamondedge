@@ -1,9 +1,9 @@
 {
   "date": "2026-06-02",
   "run_type": "full",
-  "generated": "2026-06-02T18:58:22.778490Z",
+  "generated": "2026-06-02T22:12:43.775422Z",
   "game_count": 15,
-  "ev_pick_count": 2,
+  "ev_pick_count": 1,
   "missing_books": [],
   "model": {
     "version": "v4.0",
@@ -25,110 +25,6 @@
   "picks": [
     {
       "game_metadata": {
-        "game_id": "2026-06-02-CWS-MIN",
-        "game_pk": "823700",
-        "home": "MIN",
-        "away": "CWS",
-        "home_full": "Minnesota Twins",
-        "away_full": "Chicago White Sox",
-        "home_sp": "Connor Prielipp",
-        "away_sp": "Davis Martin",
-        "start_time": "2026-06-02T23:40:00Z",
-        "venue": "Target Field",
-        "park_factor": 1.051,
-        "weather": {
-          "temp_f": 82.7,
-          "wind_mph": 3.0,
-          "wind_dir": "S",
-          "condition": "Clouds",
-          "provisional": false
-        },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
-      },
-      "projections": {
-        "fair_home_ml": -144,
-        "fair_away_ml": 144,
-        "fair_home_p": 0.591,
-        "fair_away_p": 0.409,
-        "fair_f5_p": 0.574,
-        "proj_total": 9.7,
-        "home_proj_runs": 5.17,
-        "away_proj_runs": 4.51,
-        "home_woba": 0.3087,
-        "away_woba": 0.3364,
-        "sp_home_era": 6.13,
-        "sp_away_era": 2.09,
-        "sp_home_fip": 4.16,
-        "sp_away_fip": 1.78,
-        "sp_home_k9": 9.42,
-        "sp_away_k9": 11.32,
-        "sp_home_bb9": 4.71,
-        "sp_away_bb9": 1.79,
-        "sp_home_whip": 1.68,
-        "sp_away_whip": 0.89,
-        "sp_home_ip": 19.1,
-        "sp_away_ip": 30.2,
-        "sp_home_source": "last_30d",
-        "sp_away_source": "last_30d",
-        "h_bat_source": "last_30d",
-        "a_bat_source": "last_30d",
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_bull_detail": [],
-        "a_bull_detail": [],
-        "h_home_wr": 0.551,
-        "a_away_wr": 0.401,
-        "ump_bias": 0.0,
-        "mkt_home_p": 0.4652,
-        "mkt_away_p": 0.5348,
-        "book_lines": {
-          "FanDuel": {
-            "home_ml": 106,
-            "away_ml": -124,
-            "pick_ml": 106
-          },
-          "BetMGM": {
-            "home_ml": 105,
-            "away_ml": -130,
-            "pick_ml": 105
-          }
-        },
-        "best_book": "FanDuel",
-        "best_book_ml": 106
-      },
-      "market_edge": {
-        "best_bet": "MIN ML +106 (FanDuel)",
-        "f5_bet": null,
-        "ev_percent": 12.6,
-        "kelly_stake": "5.1%",
-        "tier": "TOP",
-        "bet_side": "home",
-        "signals": [
-          "LINEUP_UNCONFIRMED"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.5622,
-        "prop_adj": 0.0288,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.591,
-        "mkt_home_p": 0.4652,
-        "h_home_wr": 0.551,
-        "a_away_wr": 0.401,
-        "park_factor": 1.051,
-        "ump_bias": 0.0,
-        "sp_suppress_h": 0.3343,
-        "sp_suppress_a": 0.2939
-      }
-    },
-    {
-      "game_metadata": {
         "game_id": "2026-06-02-PIT-HOU",
         "game_pk": "824189",
         "home": "HOU",
@@ -141,27 +37,27 @@
         "venue": "Daikin Park",
         "park_factor": 0.977,
         "weather": {
-          "temp_f": 91.6,
-          "wind_mph": 8.0,
-          "wind_dir": "E",
-          "condition": "Clouds",
+          "temp_f": 87.5,
+          "wind_mph": 5.0,
+          "wind_dir": "SE",
+          "condition": "Rain",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Louie Krupa",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
       },
       "projections": {
-        "fair_home_ml": -140,
-        "fair_away_ml": 140,
+        "fair_home_ml": -141,
+        "fair_away_ml": 141,
         "fair_home_p": 0.584,
         "fair_away_p": 0.416,
         "fair_f5_p": 0.557,
-        "proj_total": 8.9,
-        "home_proj_runs": 4.62,
-        "away_proj_runs": 4.24,
+        "proj_total": 8.5,
+        "home_proj_runs": 4.45,
+        "away_proj_runs": 4.08,
         "home_woba": 0.2849,
         "away_woba": 0.3223,
         "sp_home_era": 4.64,
@@ -187,43 +83,40 @@
         "h_home_wr": 0.593,
         "a_away_wr": 0.398,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5099,
-        "mkt_away_p": 0.4901,
+        "mkt_home_p": 0.4035,
+        "mkt_away_p": 0.5965,
         "book_lines": {
           "FanDuel": {
-            "home_ml": -112,
-            "away_ml": -104,
-            "pick_ml": -112
-          },
-          "BetMGM": {
-            "home_ml": -115,
-            "away_ml": -105,
-            "pick_ml": -115
+            "home_ml": 138,
+            "away_ml": -164,
+            "pick_ml": 138
           }
         },
         "best_book": "FanDuel",
-        "best_book_ml": -112
+        "best_book_ml": 138
       },
       "market_edge": {
-        "best_bet": "HOU ML -112 (FanDuel)",
+        "best_bet": "HOU ML +138 (FanDuel)",
         "f5_bet": null,
-        "ev_percent": 7.4,
-        "kelly_stake": "2.9%",
-        "tier": "GOOD",
+        "ev_percent": 18.1,
+        "kelly_stake": "6.2%",
+        "tier": "TOP",
         "bet_side": "home",
         "signals": [
-          "LINEUP_UNCONFIRMED",
-          "HOT_WEATHER"
+          "LINEUPS_CONFIRMED",
+          "HOT_WEATHER",
+          "RAIN_RISK",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.5392,
+        "base_pyth_p": 0.5396,
         "prop_adj": 0.0447,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5839,
-        "mkt_home_p": 0.5099,
+        "final_home_p": 0.5843,
+        "mkt_home_p": 0.4035,
         "h_home_wr": 0.593,
         "a_away_wr": 0.398,
         "park_factor": 0.977,
@@ -246,14 +139,14 @@
         "venue": "Tropicana Field",
         "park_factor": 0.908,
         "weather": {
-          "temp_f": 88.6,
-          "wind_mph": 6.0,
+          "temp_f": 87.5,
+          "wind_mph": 5.0,
           "wind_dir": "NW",
           "condition": "Clouds",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Mark Ripperger",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -265,8 +158,8 @@
         "fair_away_p": 0.517,
         "fair_f5_p": 0.457,
         "proj_total": 8.4,
-        "home_proj_runs": 3.93,
-        "away_proj_runs": 4.48,
+        "home_proj_runs": 3.92,
+        "away_proj_runs": 4.47,
         "home_woba": 0.3335,
         "away_woba": 0.2786,
         "sp_home_era": 5.54,
@@ -292,8 +185,8 @@
         "h_home_wr": 0.606,
         "a_away_wr": 0.416,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5664,
-        "mkt_away_p": 0.4336,
+        "mkt_home_p": 0.5707,
+        "mkt_away_p": 0.4293,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -306,19 +199,20 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
+          "LINEUPS_CONFIRMED",
           "PITCHERS_PARK",
-          "HOT_WEATHER"
+          "HOT_WEATHER",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4404,
+        "base_pyth_p": 0.4402,
         "prop_adj": 0.0426,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.483,
-        "mkt_home_p": 0.5664,
+        "final_home_p": 0.4828,
+        "mkt_home_p": 0.5707,
         "h_home_wr": 0.606,
         "a_away_wr": 0.416,
         "park_factor": 0.908,
@@ -341,27 +235,27 @@
         "venue": "Citizens Bank Park",
         "park_factor": 0.993,
         "weather": {
-          "temp_f": 76.3,
-          "wind_mph": 3.0,
+          "temp_f": 76.5,
+          "wind_mph": 10.2,
           "wind_dir": "N",
-          "condition": "Clear",
+          "condition": "Clouds",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Edwin Moscoso",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
       },
       "projections": {
-        "fair_home_ml": -105,
-        "fair_away_ml": 105,
-        "fair_home_p": 0.511,
-        "fair_away_p": 0.489,
-        "fair_f5_p": 0.5,
-        "proj_total": 8.5,
-        "home_proj_runs": 4.2,
-        "away_proj_runs": 4.27,
+        "fair_home_ml": -104,
+        "fair_away_ml": 104,
+        "fair_home_p": 0.51,
+        "fair_away_p": 0.49,
+        "fair_f5_p": 0.499,
+        "proj_total": 8.7,
+        "home_proj_runs": 4.32,
+        "away_proj_runs": 4.4,
         "home_woba": 0.2999,
         "away_woba": 0.2787,
         "sp_home_era": 5.53,
@@ -387,8 +281,8 @@
         "h_home_wr": 0.607,
         "a_away_wr": 0.485,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5706,
-        "mkt_away_p": 0.4294,
+        "mkt_home_p": 0.6515,
+        "mkt_away_p": 0.3485,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -401,17 +295,19 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUPS_CONFIRMED",
+          "WIND_10.2mph_N",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4924,
+        "base_pyth_p": 0.4916,
         "prop_adj": 0.0188,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5112,
-        "mkt_home_p": 0.5706,
+        "final_home_p": 0.5104,
+        "mkt_home_p": 0.6515,
         "h_home_wr": 0.607,
         "a_away_wr": 0.485,
         "park_factor": 0.993,
@@ -434,14 +330,14 @@
         "venue": "Fenway Park",
         "park_factor": 1.136,
         "weather": {
-          "temp_f": 75.8,
-          "wind_mph": 3.0,
-          "wind_dir": "N",
+          "temp_f": 73.6,
+          "wind_mph": 1.0,
+          "wind_dir": "NE",
           "condition": "Clouds",
           "provisional": false
         },
         "umpire": "Tripp Gibson",
-        "lineup_confirmed": false,
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -453,8 +349,8 @@
         "fair_away_p": 0.529,
         "fair_f5_p": 0.472,
         "proj_total": 10.1,
-        "home_proj_runs": 4.92,
-        "away_proj_runs": 5.22,
+        "home_proj_runs": 4.9,
+        "away_proj_runs": 5.2,
         "home_woba": 0.3232,
         "away_woba": 0.3198,
         "sp_home_era": 1.79,
@@ -480,8 +376,8 @@
         "h_home_wr": 0.526,
         "a_away_wr": 0.462,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.555,
-        "mkt_away_p": 0.445,
+        "mkt_home_p": 0.5635,
+        "mkt_away_p": 0.4365,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -494,18 +390,19 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
-          "HIGH_PARK_1.14x"
+          "LINEUPS_CONFIRMED",
+          "HIGH_PARK_1.14x",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4729,
+        "base_pyth_p": 0.4728,
         "prop_adj": -0.0016,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4713,
-        "mkt_home_p": 0.555,
+        "final_home_p": 0.4712,
+        "mkt_home_p": 0.5635,
         "h_home_wr": 0.526,
         "a_away_wr": 0.462,
         "park_factor": 1.136,
@@ -528,14 +425,14 @@
         "venue": "Nationals Park",
         "park_factor": 0.996,
         "weather": {
-          "temp_f": 75.6,
-          "wind_mph": 3.0,
-          "wind_dir": "NW",
+          "temp_f": 75.8,
+          "wind_mph": 4.0,
+          "wind_dir": "NE",
           "condition": "Clear",
           "provisional": false
         },
         "umpire": "Alex MacKay",
-        "lineup_confirmed": false,
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -543,12 +440,12 @@
       "projections": {
         "fair_home_ml": 123,
         "fair_away_ml": -123,
-        "fair_home_p": 0.449,
-        "fair_away_p": 0.551,
-        "fair_f5_p": 0.455,
+        "fair_home_p": 0.448,
+        "fair_away_p": 0.552,
+        "fair_f5_p": 0.454,
         "proj_total": 9.2,
         "home_proj_runs": 4.41,
-        "away_proj_runs": 4.83,
+        "away_proj_runs": 4.84,
         "home_woba": 0.3441,
         "away_woba": 0.2993,
         "sp_home_era": 5.63,
@@ -574,8 +471,8 @@
         "h_home_wr": 0.439,
         "a_away_wr": 0.399,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5153,
-        "mkt_away_p": 0.4847,
+        "mkt_home_p": 0.5089,
+        "mkt_away_p": 0.4911,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -588,17 +485,18 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUPS_CONFIRMED",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4585,
+        "base_pyth_p": 0.4575,
         "prop_adj": -0.0098,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4487,
-        "mkt_home_p": 0.5153,
+        "final_home_p": 0.4477,
+        "mkt_home_p": 0.5089,
         "h_home_wr": 0.439,
         "a_away_wr": 0.399,
         "park_factor": 0.996,
@@ -621,27 +519,27 @@
         "venue": "Yankee Stadium",
         "park_factor": 0.905,
         "weather": {
-          "temp_f": 77.0,
-          "wind_mph": 12.0,
-          "wind_dir": "NE",
+          "temp_f": 76.4,
+          "wind_mph": 10.0,
+          "wind_dir": "N",
           "condition": "Clouds",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Chris Segal",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
       },
       "projections": {
-        "fair_home_ml": 117,
-        "fair_away_ml": -117,
-        "fair_home_p": 0.46,
-        "fair_away_p": 0.54,
-        "fair_f5_p": 0.451,
+        "fair_home_ml": 118,
+        "fair_away_ml": -118,
+        "fair_home_p": 0.459,
+        "fair_away_p": 0.541,
+        "fair_f5_p": 0.45,
         "proj_total": 8.2,
-        "home_proj_runs": 3.87,
-        "away_proj_runs": 4.37,
+        "home_proj_runs": 3.84,
+        "away_proj_runs": 4.34,
         "home_woba": 0.338,
         "away_woba": 0.2995,
         "sp_home_era": 1.53,
@@ -667,8 +565,8 @@
         "h_home_wr": 0.624,
         "a_away_wr": 0.512,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.6812,
-        "mkt_away_p": 0.3188,
+        "mkt_home_p": 0.579,
+        "mkt_away_p": 0.421,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -681,19 +579,19 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
+          "LINEUPS_CONFIRMED",
           "PITCHERS_PARK",
-          "WIND_12.0mph_NE"
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4446,
+        "base_pyth_p": 0.4442,
         "prop_adj": 0.0152,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4598,
-        "mkt_home_p": 0.6812,
+        "final_home_p": 0.4594,
+        "mkt_home_p": 0.579,
         "h_home_wr": 0.624,
         "a_away_wr": 0.512,
         "park_factor": 0.905,
@@ -717,13 +615,13 @@
         "park_factor": 1.037,
         "weather": {
           "temp_f": 77.5,
-          "wind_mph": 5.0,
-          "wind_dir": "N",
+          "wind_mph": 4.0,
+          "wind_dir": "NE",
           "condition": "Clear",
           "provisional": false
         },
         "umpire": "Andy Fletcher",
-        "lineup_confirmed": false,
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -762,8 +660,8 @@
         "h_home_wr": 0.466,
         "a_away_wr": 0.356,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5251,
-        "mkt_away_p": 0.4749,
+        "mkt_home_p": 0.5326,
+        "mkt_away_p": 0.4674,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -776,7 +674,7 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUPS_CONFIRMED"
         ]
       },
       "math": {
@@ -786,7 +684,7 @@
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
         "final_home_p": 0.4745,
-        "mkt_home_p": 0.5251,
+        "mkt_home_p": 0.5326,
         "h_home_wr": 0.466,
         "a_away_wr": 0.356,
         "park_factor": 1.037,
@@ -809,14 +707,14 @@
         "venue": "Truist Park",
         "park_factor": 1.067,
         "weather": {
-          "temp_f": 80.0,
-          "wind_mph": 2.0,
-          "wind_dir": "E",
+          "temp_f": 73.6,
+          "wind_mph": 8.8,
+          "wind_dir": "NE",
           "condition": "Clouds",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Mark Wegner",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -824,12 +722,12 @@
       "projections": {
         "fair_home_ml": -102,
         "fair_away_ml": 102,
-        "fair_home_p": 0.504,
-        "fair_away_p": 0.496,
+        "fair_home_p": 0.505,
+        "fair_away_p": 0.495,
         "fair_f5_p": 0.493,
-        "proj_total": 9.3,
-        "home_proj_runs": 4.58,
-        "away_proj_runs": 4.73,
+        "proj_total": 9.4,
+        "home_proj_runs": 4.63,
+        "away_proj_runs": 4.78,
         "home_woba": 0.3153,
         "away_woba": 0.2999,
         "sp_home_era": 3.5,
@@ -855,8 +753,8 @@
         "h_home_wr": 0.61,
         "a_away_wr": 0.487,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.523,
-        "mkt_away_p": 0.477,
+        "mkt_home_p": 0.5583,
+        "mkt_away_p": 0.4417,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -869,23 +767,118 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUPS_CONFIRMED",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4853,
+        "base_pyth_p": 0.4854,
         "prop_adj": 0.0191,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5044,
-        "mkt_home_p": 0.523,
+        "final_home_p": 0.5045,
+        "mkt_home_p": 0.5583,
         "h_home_wr": 0.61,
         "a_away_wr": 0.487,
         "park_factor": 1.067,
         "ump_bias": 0.0,
         "sp_suppress_h": 0.308,
         "sp_suppress_a": 0.3058
+      }
+    },
+    {
+      "game_metadata": {
+        "game_id": "2026-06-02-CWS-MIN",
+        "game_pk": "823700",
+        "home": "MIN",
+        "away": "CWS",
+        "home_full": "Minnesota Twins",
+        "away_full": "Chicago White Sox",
+        "home_sp": "Connor Prielipp",
+        "away_sp": "Davis Martin",
+        "start_time": "2026-06-02T23:40:00Z",
+        "venue": "Target Field",
+        "park_factor": 1.051,
+        "weather": {
+          "temp_f": 83.3,
+          "wind_mph": 3.0,
+          "wind_dir": "SE",
+          "condition": "Clouds",
+          "provisional": false
+        },
+        "umpire": "John Tumpane",
+        "lineup_confirmed": true,
+        "status": "scheduled",
+        "score": "Scheduled",
+        "result": null
+      },
+      "projections": {
+        "fair_home_ml": -144,
+        "fair_away_ml": 144,
+        "fair_home_p": 0.59,
+        "fair_away_p": 0.41,
+        "fair_f5_p": 0.573,
+        "proj_total": 9.7,
+        "home_proj_runs": 5.17,
+        "away_proj_runs": 4.52,
+        "home_woba": 0.3087,
+        "away_woba": 0.3364,
+        "sp_home_era": 6.13,
+        "sp_away_era": 2.09,
+        "sp_home_fip": 4.16,
+        "sp_away_fip": 1.78,
+        "sp_home_k9": 9.42,
+        "sp_away_k9": 11.32,
+        "sp_home_bb9": 4.71,
+        "sp_away_bb9": 1.79,
+        "sp_home_whip": 1.68,
+        "sp_away_whip": 0.89,
+        "sp_home_ip": 19.1,
+        "sp_away_ip": 30.2,
+        "sp_home_source": "last_30d",
+        "sp_away_source": "last_30d",
+        "h_bat_source": "last_30d",
+        "a_bat_source": "last_30d",
+        "h_bull_tax": 0.0,
+        "a_bull_tax": 0.0,
+        "h_bull_detail": [],
+        "a_bull_detail": [],
+        "h_home_wr": 0.551,
+        "a_away_wr": 0.401,
+        "ump_bias": 0.0,
+        "mkt_home_p": 0.5857,
+        "mkt_away_p": 0.4143,
+        "book_lines": {},
+        "best_book": null,
+        "best_book_ml": null
+      },
+      "market_edge": {
+        "best_bet": "NO EDGE",
+        "f5_bet": null,
+        "ev_percent": 0.0,
+        "kelly_stake": "0%",
+        "tier": "SKIP",
+        "bet_side": null,
+        "signals": [
+          "LINEUPS_CONFIRMED",
+          "SINGLE_BOOK_ONLY"
+        ]
+      },
+      "math": {
+        "base_pyth_p": 0.5612,
+        "prop_adj": 0.0288,
+        "ump_adj": 0.0,
+        "h_fatigue_tax": 0.0,
+        "a_fatigue_tax": 0.0,
+        "final_home_p": 0.59,
+        "mkt_home_p": 0.5857,
+        "h_home_wr": 0.551,
+        "a_away_wr": 0.401,
+        "park_factor": 1.051,
+        "ump_bias": 0.0,
+        "sp_suppress_h": 0.3343,
+        "sp_suppress_a": 0.2939
       }
     },
     {
@@ -902,14 +895,14 @@
         "venue": "American Family Field",
         "park_factor": 1.003,
         "weather": {
-          "temp_f": 69.2,
-          "wind_mph": 6.0,
+          "temp_f": 71.1,
+          "wind_mph": 4.0,
           "wind_dir": "NE",
           "condition": "Clear",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Paul Clemons",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -921,8 +914,8 @@
         "fair_away_p": 0.493,
         "fair_f5_p": 0.498,
         "proj_total": 8.8,
-        "home_proj_runs": 4.35,
-        "away_proj_runs": 4.43,
+        "home_proj_runs": 4.36,
+        "away_proj_runs": 4.44,
         "home_woba": 0.3112,
         "away_woba": 0.3338,
         "sp_home_era": 0.82,
@@ -948,8 +941,8 @@
         "h_home_wr": 0.584,
         "a_away_wr": 0.471,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.7007,
-        "mkt_away_p": 0.2993,
+        "mkt_home_p": 0.6979,
+        "mkt_away_p": 0.3021,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -962,7 +955,7 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUPS_CONFIRMED"
         ]
       },
       "math": {
@@ -972,7 +965,7 @@
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
         "final_home_p": 0.5074,
-        "mkt_home_p": 0.7007,
+        "mkt_home_p": 0.6979,
         "h_home_wr": 0.584,
         "a_away_wr": 0.471,
         "park_factor": 1.003,
@@ -995,27 +988,27 @@
         "venue": "Busch Stadium",
         "park_factor": 0.948,
         "weather": {
-          "temp_f": 81.5,
-          "wind_mph": 2.0,
-          "wind_dir": "W",
-          "condition": "Clear",
+          "temp_f": 80.8,
+          "wind_mph": 10.4,
+          "wind_dir": "E",
+          "condition": "Clouds",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Manny Gonzalez",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
       },
       "projections": {
-        "fair_home_ml": -129,
-        "fair_away_ml": 129,
-        "fair_home_p": 0.563,
-        "fair_away_p": 0.437,
-        "fair_f5_p": 0.547,
-        "proj_total": 8.2,
-        "home_proj_runs": 4.24,
-        "away_proj_runs": 3.91,
+        "fair_home_ml": -128,
+        "fair_away_ml": 128,
+        "fair_home_p": 0.561,
+        "fair_away_p": 0.439,
+        "fair_f5_p": 0.545,
+        "proj_total": 8.4,
+        "home_proj_runs": 4.36,
+        "away_proj_runs": 4.04,
         "home_woba": 0.2878,
         "away_woba": 0.3125,
         "sp_home_era": 3.89,
@@ -1041,8 +1034,8 @@
         "h_home_wr": 0.55,
         "a_away_wr": 0.409,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.4978,
-        "mkt_away_p": 0.5022,
+        "mkt_home_p": 0.5154,
+        "mkt_away_p": 0.4846,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -1055,17 +1048,19 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUPS_CONFIRMED",
+          "WIND_10.4mph_E",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.537,
+        "base_pyth_p": 0.5348,
         "prop_adj": 0.0258,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5628,
-        "mkt_home_p": 0.4978,
+        "final_home_p": 0.5606,
+        "mkt_home_p": 0.5154,
         "h_home_wr": 0.55,
         "a_away_wr": 0.409,
         "park_factor": 0.948,
@@ -1088,14 +1083,14 @@
         "venue": "Wrigley Field",
         "park_factor": 1.0,
         "weather": {
-          "temp_f": 69.6,
-          "wind_mph": 7.0,
-          "wind_dir": "E",
+          "temp_f": 70.1,
+          "wind_mph": 5.0,
+          "wind_dir": "N",
           "condition": "Clear",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "D.J. Reyburn",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -1134,8 +1129,8 @@
         "h_home_wr": 0.624,
         "a_away_wr": 0.42,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5305,
-        "mkt_away_p": 0.4695,
+        "mkt_home_p": 0.5198,
+        "mkt_away_p": 0.4802,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -1148,7 +1143,8 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUPS_CONFIRMED",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
@@ -1158,7 +1154,7 @@
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
         "final_home_p": 0.5703,
-        "mkt_home_p": 0.5305,
+        "mkt_home_p": 0.5198,
         "h_home_wr": 0.624,
         "a_away_wr": 0.42,
         "park_factor": 1.0,
@@ -1181,27 +1177,27 @@
         "venue": "Angel Stadium",
         "park_factor": 1.0,
         "weather": {
-          "temp_f": 73.3,
-          "wind_mph": 6.0,
+          "temp_f": 77.0,
+          "wind_mph": 9.0,
           "wind_dir": "SW",
           "condition": "Clear",
           "provisional": false
         },
-        "umpire": "TBD",
+        "umpire": "Bill Miller",
         "lineup_confirmed": false,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
       },
       "projections": {
-        "fair_home_ml": -115,
-        "fair_away_ml": 115,
-        "fair_home_p": 0.535,
-        "fair_away_p": 0.465,
-        "fair_f5_p": 0.529,
-        "proj_total": 9.1,
-        "home_proj_runs": 4.66,
-        "away_proj_runs": 4.42,
+        "fair_home_ml": -116,
+        "fair_away_ml": 116,
+        "fair_home_p": 0.537,
+        "fair_away_p": 0.463,
+        "fair_f5_p": 0.53,
+        "proj_total": 9.0,
+        "home_proj_runs": 4.61,
+        "away_proj_runs": 4.36,
         "home_woba": 0.3003,
         "away_woba": 0.3041,
         "sp_home_era": 8.06,
@@ -1227,8 +1223,8 @@
         "h_home_wr": 0.449,
         "a_away_wr": 0.349,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5954,
-        "mkt_away_p": 0.4046,
+        "mkt_home_p": 0.5857,
+        "mkt_away_p": 0.4143,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -1241,17 +1237,18 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUP_UNCONFIRMED",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.5242,
+        "base_pyth_p": 0.5255,
         "prop_adj": 0.0111,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5353,
-        "mkt_home_p": 0.5954,
+        "final_home_p": 0.5366,
+        "mkt_home_p": 0.5857,
         "h_home_wr": 0.449,
         "a_away_wr": 0.349,
         "park_factor": 1.0,
@@ -1280,7 +1277,7 @@
           "condition": "unknown",
           "provisional": true
         },
-        "umpire": "TBD",
+        "umpire": "Stu Scheurwater",
         "lineup_confirmed": false,
         "status": "scheduled",
         "score": "Scheduled",
@@ -1320,8 +1317,8 @@
         "h_home_wr": 0.504,
         "a_away_wr": 0.613,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.4847,
-        "mkt_away_p": 0.5153,
+        "mkt_home_p": 0.3589,
+        "mkt_away_p": 0.6411,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -1334,7 +1331,8 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUP_UNCONFIRMED",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
@@ -1344,7 +1342,7 @@
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
         "final_home_p": 0.4412,
-        "mkt_home_p": 0.4847,
+        "mkt_home_p": 0.3589,
         "h_home_wr": 0.504,
         "a_away_wr": 0.613,
         "park_factor": 1.0,
@@ -1367,9 +1365,9 @@
         "venue": "T-Mobile Park",
         "park_factor": 0.896,
         "weather": {
-          "temp_f": 78.9,
+          "temp_f": 84.9,
           "wind_mph": 4.0,
-          "wind_dir": "NW",
+          "wind_dir": "W",
           "condition": "Clear",
           "provisional": false
         },
@@ -1380,14 +1378,14 @@
         "result": null
       },
       "projections": {
-        "fair_home_ml": 109,
-        "fair_away_ml": -109,
-        "fair_home_p": 0.479,
-        "fair_away_p": 0.521,
-        "fair_f5_p": 0.472,
-        "proj_total": 7.9,
-        "home_proj_runs": 3.81,
-        "away_proj_runs": 4.09,
+        "fair_home_ml": 108,
+        "fair_away_ml": -108,
+        "fair_home_p": 0.48,
+        "fair_away_p": 0.52,
+        "fair_f5_p": 0.474,
+        "proj_total": 8.0,
+        "home_proj_runs": 3.86,
+        "away_proj_runs": 4.13,
         "home_woba": 0.3187,
         "away_woba": 0.298,
         "sp_home_era": 3.37,
@@ -1413,8 +1411,8 @@
         "h_home_wr": 0.572,
         "a_away_wr": 0.473,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5784,
-        "mkt_away_p": 0.4216,
+        "mkt_home_p": 0.5545,
+        "mkt_away_p": 0.4455,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -1429,17 +1427,18 @@
         "signals": [
           "LINEUP_UNCONFIRMED",
           "PITCHERS_PARK",
-          "SP_NYM_NO_DATA"
+          "SP_NYM_NO_DATA",
+          "SINGLE_BOOK_ONLY"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4676,
+        "base_pyth_p": 0.4691,
         "prop_adj": 0.0111,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4787,
-        "mkt_home_p": 0.5784,
+        "final_home_p": 0.4802,
+        "mkt_home_p": 0.5545,
         "h_home_wr": 0.572,
         "a_away_wr": 0.473,
         "park_factor": 0.896,
