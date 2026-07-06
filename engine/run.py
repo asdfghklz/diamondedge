@@ -584,7 +584,7 @@ def predict_first_inning(game, date_str):
     nrfi_disq=nrfi_p>0.60 and (hsp["f1_ra_pct"]>0.50 or asp["f1_ra_pct"]>0.50)
 
     prediction=None; confidence=None; pick_label=None
-    if nrfi_p>=0.62 and not nrfi_disq:  # 0.62 required — 0.68 was too strict, even elite SPs couldn't reach it
+    if nrfi_p>=0.57 and not nrfi_disq:  # 0.62 required — 0.68 was too strict, even elite SPs couldn't reach it
         prediction="NRFI"; confidence=round(nrfi_p*100,1); pick_label=f"NRFI — {away_abbr}@{home_abbr}"
     elif yrfi_p>=0.68:  # YRFI threshold unchanged
         prediction="YRFI"; confidence=round(yrfi_p*100,1); pick_label=f"YRFI — {away_abbr}@{home_abbr}"
