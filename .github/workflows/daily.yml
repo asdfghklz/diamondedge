@@ -42,10 +42,17 @@ jobs:
         run: |
           DATE="${{ github.event.inputs.date }}"
           TYPE="${{ github.event.inputs.run_type }}"
-          if [ -z "$DATE" ]; then DATE=$(date -u +%Y-%m-%d); fi
+          HOUR=$(date -u +%H)
           if [ -z "$TYPE" ]; then
-            HOUR=$(date -u +%H)
             if [ "$HOUR" = "05" ]; then TYPE="results"; else TYPE="full"; fi
+          fi
+          if [ -z "$DATE" ]; then
+            if [ "$TYPE" = "results" ]; then
+              # 5 AM UTC = 11 PM CT previous day — games belong to YESTERDAY's UTC date
+              DATE=$(date -u -d "yesterday" +%Y-%m-%d)
+            else
+              DATE=$(date -u +%Y-%m-%d)
+            fi
           fi
           echo "Running $TYPE for $DATE"
           python engine/run.py "$DATE" "$TYPE"
