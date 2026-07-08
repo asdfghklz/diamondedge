@@ -2,14 +2,14 @@ name: DiamondEdge Daily Engine
 
 on:
   schedule:
-    - cron: '0 13 * * *'
-    - cron: '30 17 * * *'
-    - cron: '30 23 * * *'
-    - cron: '0 5 * * *'
+    - cron: '0 13 * * *'    # 8:00 AM CT  - morning picks
+    - cron: '30 17 * * *'   # 12:30 PM CT - lineup update
+    - cron: '30 23 * * *'   # 6:30 PM CT  - evening update
+    - cron: '0 7 * * *'     # 2:00 AM CT  - results run (after West coast games end)
   workflow_dispatch:
     inputs:
       date:
-        description: 'Date (YYYY-MM-DD, blank = today)'
+        description: 'Date (YYYY-MM-DD, blank = today US Central)'
         required: false
         default: ''
       run_type:
@@ -44,14 +44,15 @@ jobs:
           TYPE="${{ github.event.inputs.run_type }}"
           HOUR=$(date -u +%H)
           if [ -z "$TYPE" ]; then
-            if [ "$HOUR" = "05" ]; then TYPE="results"; else TYPE="full"; fi
+            if [ "$HOUR" = "07" ]; then TYPE="results"; else TYPE="full"; fi
           fi
           if [ -z "$DATE" ]; then
             if [ "$TYPE" = "results" ]; then
-              # 5 AM UTC = 11 PM CT previous day — games belong to YESTERDAY's UTC date
-              DATE=$(date -u -d "yesterday" +%Y-%m-%d)
+              # Results run at 2 AM CT — mark yesterday's games (Central time)
+              DATE=$(TZ=America/Chicago date -d "yesterday" +%Y-%m-%d)
             else
-              DATE=$(date -u +%Y-%m-%d)
+              # Always use the US Central date so evening runs don't flip to tomorrow
+              DATE=$(TZ=America/Chicago date +%Y-%m-%d)
             fi
           fi
           echo "Running $TYPE for $DATE"
