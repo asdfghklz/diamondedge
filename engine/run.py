@@ -52,12 +52,22 @@ PARK_COORDS = {
     "TEX":(32.7473,-97.0845), "TOR":(43.6414,-79.3894), "WSH":(38.8730,-77.0074),
 }
 TEAM_PARK = {
-    "ARI":"PHO01","ATL":"ATL03","BAL":"BAL12","BOS":"BOS07","CHC":"CHC11",
-    "CWS":"CHI12","CIN":"CIN09","CLE":"CLE08","COL":"DEN02","DET":"DET02",
-    "HOU":"HOU03","KC":"KC01",  "LAA":"LAA01","LAD":"LAD01","MIA":"MIA02",
-    "MIL":"MIL06","MIN":"MIN04","NYM":"NYC21","NYY":"NYC20","ATH":"OAK01",
-    "PHI":"PHI13","PIT":"PIT01","SD":"SAN02", "SF":"SFO03", "SEA":"SEA03",
-    "STL":"STL10","TB":"STP01", "TEX":"ARL02","TOR":"TOR02","WSH":"WAS11",
+    "ARI":"PHO01","ATL":"ATL03","BAL":"BAL12","BOS":"BOS07","CHC":"CHI11",
+    "CWS":"CHI12","CIN":"CIN09","CLE":"CLE08","COL":"DEN02","DET":"DET05",
+    "HOU":"HOU03","KC":"KAN06","LAA":"ANA01","LAD":"LOS03","MIA":"MIA02",
+    "MIL":"MIL06","MIN":"MIN04","NYM":"NYC21","NYY":"NYC20","ATH":"SAC01",
+    "PHI":"PHI13","PIT":"PIT08","SD":"SAN02", "SF":"SFO03", "SEA":"SEA03",
+    "STL":"STL10","TB":"STP01", "TEX":"ARL03","TOR":"TOR02","WSH":"WAS11",
+}
+
+# First-inning park deltas (2021-2025 retrosheet, 50% shrunk for team quality
+# contamination and noise, capped ±4%). Applied additively to YRFI probability.
+PARK_F1_DELTA = {
+    "DEN02": 0.036, "LOS03": 0.028, "BOS07": 0.022, "ATL03": 0.018,
+    "PHO01": 0.011, "ANA01": 0.011, "CLE08": 0.009, "BAL12": 0.006,
+    "MIA02": -0.006,"PIT08": -0.006,"KAN06": -0.007,"MIL06": -0.007,
+    "CHI12": -0.009,"TOR02": -0.011,"SFO03": -0.016,"ARL03": -0.018,
+    "NYC20": -0.021,"OAK01": -0.029,"SEA03": -0.033,
 }
 TEAM_FULL = {
     "ARI":"Arizona Diamondbacks","ATL":"Atlanta Braves","BAL":"Baltimore Orioles",
@@ -502,8 +512,16 @@ def get_team_f1_stats(team_id, n_games=20):
             "recent_scored":scored_f1[-5:],"recent_allowed":allowed_f1[-5:],"games":len(s),"provisional":False}
 
 def get_sp_f1_rate(pitcher_id):
+    """
+    SP first-inning run-allow rate.
+    Primary: REAL inning-1 splits from MLB API (sitCode i01).
+    Blended with ERA-based estimate by sample size: weight = GS/(GS+8),
+    so 4 starts = 33% actual / 67% estimate; 16 starts = 67% actual.
+    Fallback: ERA estimate alone if splits unavailable.
+    """
     if not pitcher_id:
         return {"f1_ra_pct":0.40,"starts":0,"provisional":True}
+    # Season stats for ERA + GS (also the fallback)
     data=mlb(f"/people/{pitcher_id}/stats",{"stats":"season","group":"pitching","season":2026,"sportId":1})
     splits=data.get("stats",[{}])[0].get("splits",[])
     if not splits: return {"f1_ra_pct":0.40,"starts":0,"provisional":True}
@@ -512,9 +530,31 @@ def get_sp_f1_rate(pitcher_id):
         era=float(s.get("era",4.50) or 4.50); gs=int(s.get("gamesStarted",0) or 0)
     except: era,gs=4.50,0
     if gs<3: return {"f1_ra_pct":0.40,"starts":gs,"provisional":True}
-    # Calibrated: ERA 1.50→18%, ERA 3.00→29%, ERA 5.00→43%, ERA 7.00→58%
-    f1_rate=max(0.10,min(0.70,0.18+(era-1.50)*0.070))
-    return {"f1_ra_pct":round(f1_rate,3),"era":round(era,2),"starts":gs,"provisional":False}
+    era_est=max(0.10,min(0.70,0.18+(era-1.50)*0.070))
+
+    # Real inning-1 split (runs allowed in the 1st across all starts)
+    actual_rate=None; f1_runs=None
+    try:
+        sd=mlb(f"/people/{pitcher_id}/stats",{"stats":"statSplits","sitCodes":"i01","group":"pitching","season":2026,"sportId":1})
+        ssp=sd.get("stats",[{}])[0].get("splits",[])
+        if ssp:
+            st=ssp[0].get("stat",{})
+            runs=st.get("runs", st.get("earnedRuns"))
+            if runs is not None and gs>0:
+                lam=float(runs)/gs                    # avg 1st-inning runs per start
+                actual_rate=1-math.exp(-lam)          # Poisson: P(>=1 run in the 1st)
+                f1_runs=int(runs)
+    except Exception:
+        actual_rate=None
+
+    if actual_rate is not None:
+        w=gs/(gs+8.0)                                 # sample-size blend weight
+        blended=w*actual_rate+(1-w)*era_est
+        return {"f1_ra_pct":round(max(0.08,min(0.75,blended)),3),
+                "era":round(era,2),"starts":gs,"f1_runs":f1_runs,
+                "source":"i01_split_blend","provisional":False}
+    return {"f1_ra_pct":round(era_est,3),"era":round(era,2),"starts":gs,
+            "source":"era_estimate","provisional":False}
 
 def get_top_lineup_ops(lineup_ids, n=3):
     if not lineup_ids or len(lineup_ids)<2:
@@ -577,7 +617,22 @@ def predict_first_inning(game, date_str):
     # Home scores bottom 1st (vs away SP)
     home_p=0.40*h_f1["scored_pct"]+0.35*asp["f1_ra_pct"]+0.15*h_rec+0.10*max(0,min(1,0.40+h_lb))
 
-    yrfi_p=round(max(0.15,min(0.90,1-(1-away_p)*(1-home_p))),3)
+    yrfi_raw=1-(1-away_p)*(1-home_p)
+
+    # Park adjustment (pre-shrunk deltas, max ±4% — e.g. Coors +3.6%, Seattle -3.3%)
+    park_id=TEAM_PARK.get(home_abbr,"")
+    park_delta=PARK_F1_DELTA.get(park_id,0.0)
+
+    # Extreme weather only — mild conditions are noise for one inning
+    weather=get_weather(home_abbr)
+    wx_delta=0.0
+    if not weather.get("provisional"):
+        t=weather.get("temp_f",72)
+        if t>=85: wx_delta+=0.015
+        elif t<=50: wx_delta-=0.015
+        if weather.get("condition") in ("Rain","Drizzle","Thunderstorm"): wx_delta-=0.010
+
+    yrfi_p=round(max(0.15,min(0.90,yrfi_raw+park_delta+wx_delta)),3)
     nrfi_p=round(1-yrfi_p,3)
 
     # NRFI guard: if picking NRFI, both pitchers must have <50% F1 RA rate
@@ -602,6 +657,10 @@ def predict_first_inning(game, date_str):
     if asp["f1_ra_pct"]<0.22: signals.append(f"{sp_away_name.split()[-1]}_DOMINATES_F1")
     if hsp["f1_ra_pct"]>0.58: signals.append(f"{sp_home_name.split()[-1]}_STRUGGLES_F1")
     if asp["f1_ra_pct"]>0.58: signals.append(f"{sp_away_name.split()[-1]}_STRUGGLES_F1")
+    if park_delta>=0.02: signals.append(f"HITTER_PARK_F1_{park_delta*100:+.1f}%")
+    if park_delta<=-0.02: signals.append(f"PITCHER_PARK_F1_{park_delta*100:+.1f}%")
+    if wx_delta>0: signals.append("HOT_WEATHER_F1")
+    if wx_delta<0: signals.append("COLD_OR_RAIN_F1")
 
     return {"game_id":f"{date_str}-F1-{away_abbr}-{home_abbr}","game_pk":game_pk,
             "home":home_abbr,"away":away_abbr,"home_full":home_name,"away_full":away_name,
@@ -615,7 +674,9 @@ def predict_first_inning(game, date_str):
                     "home_f1_allow_pct":h_f1["allowed_pct"],"home_recent_f1":h_f1["recent_scored"],
                     "hsp_f1_ra_pct":hsp["f1_ra_pct"],"hsp_era":hsp.get("era","N/A"),
                     "asp_f1_ra_pct":asp["f1_ra_pct"],"asp_era":asp.get("era","N/A"),
-                    "away_top3_ops":a_hit["avg_ops"],"home_top3_ops":h_hit["avg_ops"]},
+                    "away_top3_ops":a_hit["avg_ops"],"home_top3_ops":h_hit["avg_ops"],
+                    "park_f1_delta":park_delta,"weather_f1_delta":round(wx_delta,3),
+                    "hsp_source":hsp.get("source","era_estimate"),"asp_source":asp.get("source","era_estimate")},
             "signals":signals,"nrfi_disqualified":nrfi_disq}
 
 def run_f1_predictions(games, date_str):
