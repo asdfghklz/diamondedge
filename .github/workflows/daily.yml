@@ -3,9 +3,9 @@ name: DiamondEdge Daily Engine
 on:
   schedule:
     - cron: '0 13 * * *'    # 8:00 AM CT  - morning picks
-    - cron: '30 17 * * *'   # 12:30 PM CT - lineup update
-    - cron: '30 23 * * *'   # 6:30 PM CT  - evening update
-    - cron: '0 7 * * *'     # 2:00 AM CT  - results run (after West coast games end)
+    - cron: '30 17 * * *'   # 12:30 PM CT - lock point (last update, then frozen)
+    - cron: '30 23 * * *'   # 6:30 PM CT  - locked pass-through + result checks
+    - cron: '0 7 * * *'     # 2:00 AM CT  - results run
   workflow_dispatch:
     inputs:
       date:
@@ -42,21 +42,19 @@ jobs:
         run: |
           DATE="${{ github.event.inputs.date }}"
           TYPE="${{ github.event.inputs.run_type }}"
-          HOUR=$(date -u +%H)
+          HOUR_CT=$(TZ=America/Chicago date +%H)
           if [ -z "$TYPE" ]; then
-            if [ "$HOUR" = "07" ]; then TYPE="results"; else TYPE="full"; fi
+            if [ "$HOUR_CT" = "02" ]; then TYPE="results"; else TYPE="full"; fi
           fi
           if [ -z "$DATE" ]; then
             if [ "$TYPE" = "results" ]; then
-              # Results run at 2 AM CT — mark yesterday's games (Central time)
               DATE=$(TZ=America/Chicago date -d "yesterday" +%Y-%m-%d)
             else
-              # Always use the US Central date so evening runs don't flip to tomorrow
               DATE=$(TZ=America/Chicago date +%Y-%m-%d)
             fi
           fi
-          echo "Running $TYPE for $DATE"
-          python engine/run.py "$DATE" "$TYPE"
+          echo "Running $TYPE for $DATE (Central hour: $HOUR_CT)"
+          python engine/run.py "$DATE" "$TYPE" "$HOUR_CT"
 
       - name: Commit picks.json
         run: |
