@@ -734,6 +734,9 @@ def run_results(date_str, existing_data):
 def main():
     date_str=sys.argv[1] if len(sys.argv)>1 else datetime.date.today().strftime("%Y-%m-%d")
     run_type=sys.argv[2] if len(sys.argv)>2 else "full"
+    # Hour in US Central time, passed by the workflow — used for the 12 PM lock.
+    # Falls back to UTC hour if not provided (manual local runs).
+    hour_ct=int(sys.argv[3]) if len(sys.argv)>3 else datetime.datetime.utcnow().hour
     print(f"\n{'='*55}")
     print(f"  DiamondEdge Engine v4 | {date_str} | {run_type}")
     print(f"  Data: MLB Stats API (official) + Odds API + OpenWeatherMap")
@@ -748,6 +751,20 @@ def main():
                 existing_data=json.load(f)
                 if existing_data.get("date")!=date_str: existing_data={}
         except: pass
+
+    # ── 12 PM CENTRAL LOCK ──
+    # Once a run happens at/after noon Central for a given date, that day's picks
+    # (game tier/bet_side/EV and F1 predictions) are frozen for the rest of the day.
+    # Only live status/score updates and W/L results continue to apply.
+    if run_type=="full" and existing_data.get("locked") and existing_data.get("date")==date_str:
+        print(f"\n🔒 {date_str} is locked (picks were finalized at/after 12 PM CT).")
+        print("   Skipping recompute — only checking for completed games.")
+        picks,f1_picks=run_results(date_str,existing_data)
+        existing_data["picks"]=picks; existing_data["f1_picks"]=f1_picks
+        existing_data["generated"]=datetime.datetime.utcnow().isoformat()+"Z"
+        with open(OUT_PATH,"w") as f: json.dump(existing_data,f,indent=2)
+        print("✅ Locked picks preserved, results checked")
+        return
 
     if run_type=="results":
         if not existing_data: print("No existing data to update"); return
@@ -797,6 +814,7 @@ def main():
             "game_count":len(picks_final),"ev_pick_count":len(ev_picks),
             "f1_confident_count":len([p for p in f1_final if p["prediction"]]),
             "missing_books":missing_books,
+            "locked": hour_ct>=12,  # true once a run happens at/after 12 PM Central
             "model":{"version":"v4.0",
                 "data_sources":["MLB Stats API — official 2026 season stats",
                     "FIP calculated from HR/BB/HBP/K/IP","wOBA from counting stats",
