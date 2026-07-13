@@ -1,7 +1,7 @@
 {
   "date": "2026-07-12",
   "run_type": "full",
-  "generated": "2026-07-12T19:19:27.356267Z",
+  "generated": "2026-07-13T01:06:28.666211Z",
   "game_count": 15,
   "ev_pick_count": 2,
   "f1_confident_count": 2,
@@ -46,9 +46,9 @@
         },
         "umpire": "Adrian Johnson",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "HOU 5 \u00b7 TEX 6 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 168,
@@ -151,9 +151,9 @@
         },
         "umpire": "David Rackley",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "NYY 5 \u00b7 WSH 3 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 189,
