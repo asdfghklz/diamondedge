@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "run_type": "full",
-  "generated": "2026-07-15T00:52:47.091931Z",
-  "game_count": 1,
+  "generated": "2026-07-15T09:09:48.071345Z",
+  "game_count": 0,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,149 +23,6 @@
     },
     "train_games": 33292
   },
-  "picks": [
-    {
-      "game_metadata": {
-        "game_id": "2026-07-14-AL-NL",
-        "game_pk": "823443",
-        "home": "NL",
-        "away": "AL",
-        "home_full": "National League All-Stars",
-        "away_full": "American League All-Stars",
-        "home_sp": "Cristopher S\u00e1nchez",
-        "away_sp": "Dylan Cease",
-        "start_time": "2026-07-15T00:00:00Z",
-        "venue": "Citizens Bank Park",
-        "park_factor": 1.0,
-        "weather": {
-          "temp_f": 72,
-          "wind_mph": 0,
-          "wind_dir": "",
-          "condition": "unknown",
-          "provisional": true
-        },
-        "umpire": "Alan Porter",
-        "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
-      },
-      "projections": {
-        "fair_home_ml": -114,
-        "fair_away_ml": 114,
-        "fair_home_p": 0.533,
-        "fair_away_p": 0.467,
-        "fair_f5_p": 0.533,
-        "proj_total": 8.9,
-        "home_proj_runs": 4.6,
-        "away_proj_runs": 4.28,
-        "home_woba": 0.318,
-        "away_woba": 0.318,
-        "sp_home_era": 5.68,
-        "sp_away_era": 1.84,
-        "sp_home_fip": 5.15,
-        "sp_away_fip": 1.84,
-        "sp_home_k9": 8.38,
-        "sp_away_k9": 13.78,
-        "sp_home_bb9": 1.89,
-        "sp_away_bb9": 5.2,
-        "sp_home_whip": 1.56,
-        "sp_away_whip": 1.09,
-        "sp_home_ip": 33.3,
-        "sp_away_ip": 29.4,
-        "sp_home_source": "last_30d",
-        "sp_away_source": "last_30d",
-        "h_bat_source": "league_avg",
-        "a_bat_source": "league_avg",
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_bull_detail": [],
-        "a_bull_detail": [],
-        "h_home_wr": 0.534,
-        "a_away_wr": 0.466,
-        "ump_bias": 0.0,
-        "mkt_home_p": null,
-        "mkt_away_p": null,
-        "book_lines": {},
-        "best_book": null,
-        "best_book_ml": null
-      },
-      "market_edge": {
-        "best_bet": "NO EDGE",
-        "f5_bet": null,
-        "ev_percent": 0.0,
-        "kelly_stake": "0%",
-        "tier": "SKIP",
-        "bet_side": null,
-        "signals": [
-          "LINEUPS_CONFIRMED",
-          "NO_ODDS_AVAILABLE"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.5329,
-        "prop_adj": 0.0,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5329,
-        "mkt_home_p": null,
-        "h_home_wr": 0.534,
-        "a_away_wr": 0.466,
-        "park_factor": 1.0,
-        "ump_bias": 0.0,
-        "sp_suppress_h": 0.3298,
-        "sp_suppress_a": 0.2914
-      }
-    }
-  ],
-  "f1_picks": [
-    {
-      "game_id": "2026-07-14-F1-AL-NL",
-      "game_pk": "823443",
-      "home": "NL",
-      "away": "AL",
-      "home_full": "National League All-Stars",
-      "away_full": "American League All-Stars",
-      "home_sp": "Cristopher S\u00e1nchez",
-      "away_sp": "Dylan Cease",
-      "start_time": "2026-07-15T00:00:00Z",
-      "status": "scheduled",
-      "score": "Scheduled",
-      "result": null,
-      "prediction": null,
-      "pick_label": null,
-      "confidence": null,
-      "yrfi_p": 0.631,
-      "nrfi_p": 0.369,
-      "away_score_p": 0.414,
-      "home_score_p": 0.371,
-      "kalshi_yes": null,
-      "kalshi_no": null,
-      "kalshi_note": "No Kalshi market found",
-      "data": {
-        "away_f1_score_pct": 0.4,
-        "away_f1_allow_pct": 0.4,
-        "away_recent_f1": [],
-        "home_f1_score_pct": 0.4,
-        "home_f1_allow_pct": 0.4,
-        "home_recent_f1": [],
-        "hsp_f1_ra_pct": 0.433,
-        "hsp_era": 2.62,
-        "asp_f1_ra_pct": 0.311,
-        "asp_era": 2.56,
-        "away_top3_ops": 0.91,
-        "home_top3_ops": 0.919,
-        "park_f1_delta": 0.0,
-        "weather_f1_delta": 0.0,
-        "hsp_source": "i01_split_blend",
-        "asp_source": "i01_split_blend"
-      },
-      "signals": [
-        "AL_LIMITED_F1_DATA",
-        "NL_LIMITED_F1_DATA"
-      ],
-      "nrfi_disqualified": false
-    }
-  ]
+  "picks": [],
+  "f1_picks": []
 }
