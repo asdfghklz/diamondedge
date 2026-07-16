@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-15",
+  "date": "2026-07-16",
   "run_type": "full",
-  "generated": "2026-07-16T00:58:06.731457Z",
-  "game_count": 0,
+  "generated": "2026-07-16T09:15:08.818675Z",
+  "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,6 +23,159 @@
     },
     "train_games": 33292
   },
-  "picks": [],
-  "f1_picks": []
+  "picks": [
+    {
+      "game_metadata": {
+        "game_id": "2026-07-16-NYM-PHI",
+        "game_pk": "823440",
+        "home": "PHI",
+        "away": "NYM",
+        "home_full": "Philadelphia Phillies",
+        "away_full": "New York Mets",
+        "home_sp": "Aaron Nola",
+        "away_sp": "Christian Scott",
+        "start_time": "2026-07-16T23:10:00Z",
+        "venue": "Citizens Bank Park",
+        "park_factor": 0.993,
+        "weather": {
+          "temp_f": 75.5,
+          "wind_mph": 0.9,
+          "wind_dir": "E",
+          "condition": "Clouds",
+          "provisional": false
+        },
+        "umpire": "TBD",
+        "lineup_confirmed": false,
+        "status": "scheduled",
+        "score": "Scheduled",
+        "result": null
+      },
+      "projections": {
+        "fair_home_ml": -123,
+        "fair_away_ml": 123,
+        "fair_home_p": 0.551,
+        "fair_away_p": 0.449,
+        "fair_f5_p": 0.531,
+        "proj_total": 9.1,
+        "home_proj_runs": 4.66,
+        "away_proj_runs": 4.48,
+        "home_woba": 0.3273,
+        "away_woba": 0.3262,
+        "sp_home_era": 5.52,
+        "sp_away_era": 3.17,
+        "sp_home_fip": 5.2,
+        "sp_away_fip": 4.17,
+        "sp_home_k9": 10.69,
+        "sp_away_k9": 10.83,
+        "sp_home_bb9": 2.41,
+        "sp_away_bb9": 4.33,
+        "sp_home_whip": 1.34,
+        "sp_away_whip": 1.3,
+        "sp_home_ip": 26.1,
+        "sp_away_ip": 54.0,
+        "sp_home_source": "last_30d",
+        "sp_away_source": "season_2026",
+        "h_bat_source": "last_30d",
+        "a_bat_source": "last_30d",
+        "h_bull_tax": 0.0,
+        "a_bull_tax": 0.0,
+        "h_bull_detail": [],
+        "a_bull_detail": [],
+        "h_home_wr": 0.607,
+        "a_away_wr": 0.473,
+        "ump_bias": 0.0,
+        "mkt_home_p": 0.5398,
+        "mkt_away_p": 0.4602,
+        "book_lines": {},
+        "best_book": null,
+        "best_book_ml": null
+      },
+      "market_edge": {
+        "best_bet": "NO EDGE",
+        "f5_bet": null,
+        "ev_percent": 0.0,
+        "kelly_stake": "0%",
+        "tier": "SKIP",
+        "bet_side": null,
+        "signals": [
+          "LINEUP_UNCONFIRMED"
+        ]
+      },
+      "math": {
+        "base_pyth_p": 0.518,
+        "prop_adj": 0.0329,
+        "ump_adj": 0.0,
+        "h_fatigue_tax": 0.0,
+        "a_fatigue_tax": 0.0,
+        "final_home_p": 0.5509,
+        "mkt_home_p": 0.5398,
+        "h_home_wr": 0.607,
+        "a_away_wr": 0.473,
+        "park_factor": 0.993,
+        "ump_bias": 0.0,
+        "sp_suppress_h": 0.3282,
+        "sp_suppress_a": 0.3047
+      }
+    }
+  ],
+  "f1_picks": [
+    {
+      "game_id": "2026-07-16-F1-NYM-PHI",
+      "game_pk": "823440",
+      "home": "PHI",
+      "away": "NYM",
+      "home_full": "Philadelphia Phillies",
+      "away_full": "New York Mets",
+      "home_sp": "Aaron Nola",
+      "away_sp": "Christian Scott",
+      "start_time": "2026-07-16T23:10:00Z",
+      "status": "scheduled",
+      "score": "Scheduled",
+      "result": null,
+      "prediction": null,
+      "pick_label": null,
+      "confidence": null,
+      "yrfi_p": 0.474,
+      "nrfi_p": 0.526,
+      "away_score_p": 0.322,
+      "home_score_p": 0.224,
+      "kalshi_yes": null,
+      "kalshi_no": null,
+      "kalshi_note": "No Kalshi market found",
+      "data": {
+        "away_f1_score_pct": 0.2,
+        "away_f1_allow_pct": 0.3,
+        "away_recent_f1": [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "home_f1_score_pct": 0.15,
+        "home_f1_allow_pct": 0.25,
+        "home_recent_f1": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hsp_f1_ra_pct": 0.407,
+        "hsp_era": 5.75,
+        "asp_f1_ra_pct": 0.355,
+        "asp_era": 3.17,
+        "away_top3_ops": 0.72,
+        "home_top3_ops": 0.72,
+        "park_f1_delta": 0.0,
+        "weather_f1_delta": 0.0,
+        "hsp_source": "i01_split_blend",
+        "asp_source": "i01_split_blend"
+      },
+      "signals": [
+        "LINEUP_UNCONFIRMED"
+      ],
+      "nrfi_disqualified": false
+    }
+  ]
 }
