@@ -1,12 +1,12 @@
 {
   "date": "2026-07-16",
   "run_type": "full",
-  "generated": "2026-07-16T14:52:56.483889Z",
+  "generated": "2026-07-16T18:35:59.982702Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,9 +38,9 @@
         "venue": "Citizens Bank Park",
         "park_factor": 0.993,
         "weather": {
-          "temp_f": 85.5,
-          "wind_mph": 4.0,
-          "wind_dir": "S",
+          "temp_f": 91.7,
+          "wind_mph": 5.0,
+          "wind_dir": "SW",
           "condition": "Clouds",
           "provisional": false
         },
@@ -51,14 +51,14 @@
         "result": null
       },
       "projections": {
-        "fair_home_ml": -123,
-        "fair_away_ml": 123,
-        "fair_home_p": 0.551,
-        "fair_away_p": 0.449,
-        "fair_f5_p": 0.532,
-        "proj_total": 9.3,
-        "home_proj_runs": 4.76,
-        "away_proj_runs": 4.57,
+        "fair_home_ml": -122,
+        "fair_away_ml": 122,
+        "fair_home_p": 0.55,
+        "fair_away_p": 0.45,
+        "fair_f5_p": 0.531,
+        "proj_total": 9.4,
+        "home_proj_runs": 4.81,
+        "away_proj_runs": 4.63,
         "home_woba": 0.3273,
         "away_woba": 0.3262,
         "sp_home_era": 5.52,
@@ -84,8 +84,8 @@
         "h_home_wr": 0.607,
         "a_away_wr": 0.473,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5448,
-        "mkt_away_p": 0.4552,
+        "mkt_home_p": 0.5427,
+        "mkt_away_p": 0.4573,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -103,13 +103,13 @@
         ]
       },
       "math": {
-        "base_pyth_p": 0.5186,
+        "base_pyth_p": 0.5174,
         "prop_adj": 0.0329,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5515,
-        "mkt_home_p": 0.5448,
+        "final_home_p": 0.5503,
+        "mkt_home_p": 0.5427,
         "h_home_wr": 0.607,
         "a_away_wr": 0.473,
         "park_factor": 0.993,
