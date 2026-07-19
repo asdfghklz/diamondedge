@@ -1,7 +1,7 @@
 {
   "date": "2026-07-18",
   "run_type": "full",
-  "generated": "2026-07-18T18:13:52.961685Z",
+  "generated": "2026-07-19T01:03:15.393970Z",
   "game_count": 16,
   "ev_pick_count": 5,
   "f1_confident_count": 4,
@@ -46,9 +46,9 @@
         },
         "umpire": "TBD",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "PIT 7 \u00b7 CLE 1 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -166,
@@ -148,9 +148,9 @@
         },
         "umpire": "Roberto Ortiz",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "PIT 7 \u00b7 CLE 1 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -165,
@@ -248,9 +248,9 @@
         },
         "umpire": "Willie Traynor",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "SD 1 \u00b7 KC 6 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 147,
@@ -348,9 +348,9 @@
         },
         "umpire": "Manny Gonzalez",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "CWS 0 \u00b7 TOR 1 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": -145,
@@ -447,9 +447,9 @@
         },
         "umpire": "Ben May",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "TEX 7 \u00b7 ATL 6 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -145,
