@@ -1,7 +1,7 @@
 {
   "date": "2026-07-19",
   "run_type": "full",
-  "generated": "2026-07-19T18:13:33.263648Z",
+  "generated": "2026-07-20T01:06:24.083606Z",
   "game_count": 16,
   "ev_pick_count": 3,
   "f1_confident_count": 2,
@@ -46,9 +46,9 @@
         },
         "umpire": "Tom Hanahan",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "CWS 3 \u00b7 TOR 0 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -142,
@@ -150,9 +150,9 @@
         },
         "umpire": "Alex MacKay",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "PIT 7 \u00b7 CLE 1 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -150,
@@ -254,9 +254,9 @@
         },
         "umpire": "Jacob Metz",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "WSH 5 \u00b7 ATH 2 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -144,
