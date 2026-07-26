@@ -1,7 +1,7 @@
 {
   "date": "2026-07-25",
   "run_type": "full",
-  "generated": "2026-07-25T18:13:14.081545Z",
+  "generated": "2026-07-26T01:08:19.244778Z",
   "game_count": 15,
   "ev_pick_count": 3,
   "f1_confident_count": 0,
@@ -46,9 +46,9 @@
         },
         "umpire": "Stu Scheurwater",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "AZ 3 \u00b7 WSH 5 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 157,
@@ -254,9 +254,9 @@
         },
         "umpire": "Paul Clemons",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "TOR 6 \u00b7 BOS 0 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 147,
