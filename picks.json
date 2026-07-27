@@ -1,7 +1,7 @@
 {
   "date": "2026-07-26",
   "run_type": "full",
-  "generated": "2026-07-26T18:29:50.192100Z",
+  "generated": "2026-07-27T01:10:24.400605Z",
   "game_count": 14,
   "ev_pick_count": 1,
   "f1_confident_count": 0,
@@ -46,9 +46,9 @@
         },
         "umpire": "Mark Ripperger",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "HOU 3 \u00b7 CWS 12 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 159,
