@@ -1,7 +1,7 @@
 {
   "date": "2026-07-29",
   "run_type": "full",
-  "generated": "2026-07-29T18:29:34.611924Z",
+  "generated": "2026-07-30T00:55:35.272807Z",
   "game_count": 14,
   "ev_pick_count": 3,
   "f1_confident_count": 2,
@@ -46,9 +46,9 @@
         },
         "umpire": "Lance Barksdale",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "TOR 5 \u00b7 WSH 2 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 204,
