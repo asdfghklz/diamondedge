@@ -1,7 +1,7 @@
 {
   "date": "2026-07-30",
   "run_type": "full",
-  "generated": "2026-07-30T18:52:01.055036Z",
+  "generated": "2026-07-31T01:06:54.184870Z",
   "game_count": 10,
   "ev_pick_count": 1,
   "f1_confident_count": 1,
@@ -46,9 +46,9 @@
         },
         "umpire": "Alex MacKay",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "NYY 1 \u00b7 CWS 2 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 172,
