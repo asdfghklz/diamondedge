@@ -1,7 +1,7 @@
 {
   "date": "2026-08-02",
   "run_type": "full",
-  "generated": "2026-08-02T18:16:11.368028Z",
+  "generated": "2026-08-03T01:07:51.768263Z",
   "game_count": 15,
   "ev_pick_count": 1,
   "f1_confident_count": 0,
@@ -46,9 +46,9 @@
         },
         "umpire": "Chris Conroy",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "MIA 2 \u00b7 NYM 0 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -141,
