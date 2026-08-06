@@ -1,7 +1,7 @@
 {
   "date": "2026-08-05",
   "run_type": "full",
-  "generated": "2026-08-05T18:58:25.320712Z",
+  "generated": "2026-08-06T00:53:22.050570Z",
   "game_count": 15,
   "ev_pick_count": 2,
   "f1_confident_count": 1,
@@ -46,9 +46,9 @@
         },
         "umpire": "Erich Bacchus",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "LAD 6 \u00b7 CHC 7 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 146,
