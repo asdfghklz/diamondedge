@@ -46,9 +46,9 @@
         },
         "umpire": "TBD",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "HOU 6 \u00b7 SD 3 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 150,
@@ -2338,5 +2338,6 @@
       ],
       "nrfi_disqualified": false
     }
-  ]
+  ],
+  "last_results_check": "2026-08-08T07:50:26.009082Z"
 }
