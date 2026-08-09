@@ -1,7 +1,7 @@
 {
   "date": "2026-08-09",
   "run_type": "full",
-  "generated": "2026-08-09T17:54:26.467015Z",
+  "generated": "2026-08-09T23:59:57.216385Z",
   "game_count": 15,
   "ev_pick_count": 1,
   "f1_confident_count": 3,
@@ -46,9 +46,9 @@
         },
         "umpire": "Paul Clemons",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "DET 3 \u00b7 SF 1 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -149,
