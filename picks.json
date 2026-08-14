@@ -1,7 +1,7 @@
 {
   "date": "2026-08-13",
   "run_type": "full",
-  "generated": "2026-08-13T18:13:39.657288Z",
+  "generated": "2026-08-14T00:09:05.909222Z",
   "game_count": 9,
   "ev_pick_count": 1,
   "f1_confident_count": 0,
@@ -46,9 +46,9 @@
         },
         "umpire": "James Hoye",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "CLE 0 \u00b7 DET 3 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 141,
