@@ -46,9 +46,9 @@
         },
         "umpire": "TBD",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "WSH 1 \u00b7 NYM 4 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": -154,
@@ -2177,5 +2177,6 @@
       ],
       "nrfi_disqualified": false
     }
-  ]
+  ],
+  "last_results_check": "2026-08-15T07:31:02.463146Z"
 }
