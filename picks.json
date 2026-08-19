@@ -46,9 +46,9 @@
         },
         "umpire": "TBD",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "NYY 3 \u00b7 BAL 1 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 157,
@@ -2335,5 +2335,6 @@
       ],
       "nrfi_disqualified": false
     }
-  ]
+  ],
+  "last_results_check": "2026-08-19T07:38:22.273346Z"
 }
