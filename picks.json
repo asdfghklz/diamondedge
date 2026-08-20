@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
   "run_type": "full",
-  "generated": "2026-08-20T17:52:25.362843Z",
+  "generated": "2026-08-20T23:51:55.651336Z",
   "game_count": 9,
   "ev_pick_count": 2,
   "f1_confident_count": 1,
@@ -46,9 +46,9 @@
         },
         "umpire": "Ron Kulpa",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "ATL 2 \u00b7 CWS 0 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 175,
