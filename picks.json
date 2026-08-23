@@ -1,7 +1,7 @@
 {
   "date": "2026-08-23",
   "run_type": "full",
-  "generated": "2026-08-23T17:40:46.265253Z",
+  "generated": "2026-08-23T23:48:02.094858Z",
   "game_count": 15,
   "ev_pick_count": 1,
   "f1_confident_count": 2,
@@ -46,9 +46,9 @@
         },
         "umpire": "Ben May",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "CHC 19 \u00b7 SEA 2 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -143,
