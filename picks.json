@@ -46,9 +46,9 @@
         },
         "umpire": "TBD",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "KC 13 \u00b7 TOR 2 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -143,
@@ -1110,5 +1110,6 @@
       ],
       "nrfi_disqualified": false
     }
-  ]
+  ],
+  "last_results_check": "2026-08-28T07:02:23.256292Z"
 }
