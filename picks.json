@@ -1,7 +1,7 @@
 {
   "date": "2026-08-30",
   "run_type": "full",
-  "generated": "2026-08-30T19:53:19.529217Z",
+  "generated": "2026-08-31T01:31:52.641724Z",
   "game_count": 14,
   "ev_pick_count": 2,
   "f1_confident_count": 3,
@@ -46,9 +46,9 @@
         },
         "umpire": "Vic Carapazza",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "BOS 1 \u00b7 NYY 16 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": -140,
@@ -152,9 +152,9 @@
         },
         "umpire": "Nate Tomlinson",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "HOU 6 \u00b7 NYM 3 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 143,
