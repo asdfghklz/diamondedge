@@ -1,7 +1,7 @@
 {
   "date": "2026-08-31",
   "run_type": "full",
-  "generated": "2026-08-31T21:56:12.006424Z",
+  "generated": "2026-09-01T01:59:44.926952Z",
   "game_count": 12,
   "ev_pick_count": 1,
   "f1_confident_count": 1,
@@ -46,9 +46,9 @@
         },
         "umpire": "Lance Barksdale",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "SEA 8 \u00b7 BOS 9 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 144,
