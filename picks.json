@@ -1,7 +1,7 @@
 {
   "date": "2026-09-06",
   "run_type": "full",
-  "generated": "2026-09-06T19:19:40.890689Z",
+  "generated": "2026-09-07T01:15:34.137522Z",
   "game_count": 15,
   "ev_pick_count": 1,
   "f1_confident_count": 2,
@@ -46,9 +46,9 @@
         },
         "umpire": "Edwin Jimenez",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "AZ 3 \u00b7 HOU 2 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": -153,
