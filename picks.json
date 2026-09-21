@@ -1,12 +1,12 @@
 {
   "date": "2026-09-21",
   "run_type": "full",
-  "generated": "2026-09-21T13:41:31.012809Z",
+  "generated": "2026-09-21T18:24:15.159295Z",
   "game_count": 2,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,10 +38,10 @@
         "venue": "Oriole Park at Camden Yards",
         "park_factor": 1.05,
         "weather": {
-          "temp_f": 69.3,
-          "wind_mph": 15.0,
+          "temp_f": 71.5,
+          "wind_mph": 9.2,
           "wind_dir": "NE",
-          "condition": "Clouds",
+          "condition": "Rain",
           "provisional": false
         },
         "umpire": "TBD",
@@ -51,14 +51,14 @@
         "result": null
       },
       "projections": {
-        "fair_home_ml": -102,
-        "fair_away_ml": 102,
+        "fair_home_ml": -103,
+        "fair_away_ml": 103,
         "fair_home_p": 0.506,
         "fair_away_p": 0.494,
         "fair_f5_p": 0.526,
-        "proj_total": 9.6,
-        "home_proj_runs": 5.0,
-        "away_proj_runs": 4.59,
+        "proj_total": 9.2,
+        "home_proj_runs": 4.81,
+        "away_proj_runs": 4.41,
         "home_woba": 0.2974,
         "away_woba": 0.3259,
         "sp_home_era": 4.9,
@@ -84,8 +84,8 @@
         "h_home_wr": 0.489,
         "a_away_wr": 0.487,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5045,
-        "mkt_away_p": 0.4955,
+        "mkt_home_p": 0.5242,
+        "mkt_away_p": 0.4758,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -99,17 +99,17 @@
         "bet_side": null,
         "signals": [
           "LINEUP_UNCONFIRMED",
-          "WIND_15.0mph_NE"
+          "RAIN_RISK"
         ]
       },
       "math": {
-        "base_pyth_p": 0.5391,
+        "base_pyth_p": 0.5396,
         "prop_adj": -0.0334,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5057,
-        "mkt_home_p": 0.5045,
+        "final_home_p": 0.5062,
+        "mkt_home_p": 0.5242,
         "h_home_wr": 0.489,
         "a_away_wr": 0.487,
         "park_factor": 1.05,
@@ -132,8 +132,8 @@
         "venue": "Oracle Park",
         "park_factor": 0.888,
         "weather": {
-          "temp_f": 56.8,
-          "wind_mph": 9.0,
+          "temp_f": 59.9,
+          "wind_mph": 8.1,
           "wind_dir": "W",
           "condition": "Clouds",
           "provisional": false
@@ -151,8 +151,8 @@
         "fair_away_p": 0.489,
         "fair_f5_p": 0.508,
         "proj_total": 7.5,
-        "home_proj_runs": 3.76,
-        "away_proj_runs": 3.71,
+        "home_proj_runs": 3.79,
+        "away_proj_runs": 3.74,
         "home_woba": 0.318,
         "away_woba": 0.3112,
         "sp_home_era": 4.96,
@@ -178,8 +178,8 @@
         "h_home_wr": 0.532,
         "a_away_wr": 0.455,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.477,
-        "mkt_away_p": 0.523,
+        "mkt_home_p": 0.4493,
+        "mkt_away_p": 0.5507,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -203,7 +203,7 @@
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
         "final_home_p": 0.5108,
-        "mkt_home_p": 0.477,
+        "mkt_home_p": 0.4493,
         "h_home_wr": 0.532,
         "a_away_wr": 0.455,
         "park_factor": 0.888,
@@ -230,8 +230,8 @@
       "prediction": null,
       "pick_label": null,
       "confidence": null,
-      "yrfi_p": 0.555,
-      "nrfi_p": 0.445,
+      "yrfi_p": 0.545,
+      "nrfi_p": 0.455,
       "away_score_p": 0.377,
       "home_score_p": 0.276,
       "kalshi_yes": null,
@@ -263,12 +263,13 @@
         "away_top3_ops": 0.72,
         "home_top3_ops": 0.72,
         "park_f1_delta": 0.006,
-        "weather_f1_delta": 0.0,
+        "weather_f1_delta": -0.01,
         "hsp_source": "i01_split_blend",
         "asp_source": "i01_split_blend"
       },
       "signals": [
-        "LINEUP_UNCONFIRMED"
+        "LINEUP_UNCONFIRMED",
+        "COLD_OR_RAIN_F1"
       ],
       "nrfi_disqualified": false
     },
