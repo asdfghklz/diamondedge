@@ -1,7 +1,7 @@
 {
   "date": "2026-09-25",
   "run_type": "full",
-  "generated": "2026-09-25T20:33:48.743941Z",
+  "generated": "2026-09-26T01:52:47.101715Z",
   "game_count": 17,
   "ev_pick_count": 1,
   "f1_confident_count": 1,
@@ -46,9 +46,9 @@
         },
         "umpire": "TBD",
         "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "ATL 0 \u00b7 MIA 3 \u2014 FINAL",
+        "result": "L"
       },
       "projections": {
         "fair_home_ml": 156,
