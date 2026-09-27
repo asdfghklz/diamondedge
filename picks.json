@@ -1,7 +1,7 @@
 {
   "date": "2026-09-26",
   "run_type": "full",
-  "generated": "2026-09-26T19:59:06.234390Z",
+  "generated": "2026-09-27T01:41:03.893880Z",
   "game_count": 12,
   "ev_pick_count": 1,
   "f1_confident_count": 0,
@@ -46,9 +46,9 @@
         },
         "umpire": "Clint Vondrak",
         "lineup_confirmed": true,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
+        "status": "closed",
+        "score": "ATL 8 \u00b7 MIA 3 \u2014 FINAL",
+        "result": "W"
       },
       "projections": {
         "fair_home_ml": 160,
