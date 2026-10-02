@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "run_type": "full",
-  "generated": "2026-10-02T02:30:23.247360Z",
-  "game_count": 1,
+  "generated": "2026-10-02T13:38:08.990778Z",
+  "game_count": 0,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,161 +23,6 @@
     },
     "train_games": 33292
   },
-  "picks": [
-    {
-      "game_metadata": {
-        "game_id": "2026-10-01-PHI-ATL",
-        "game_pk": "849844",
-        "home": "ATL",
-        "away": "PHI",
-        "home_full": "Atlanta Braves",
-        "away_full": "Philadelphia Phillies",
-        "home_sp": "Ray Kerr",
-        "away_sp": "Aaron Nola",
-        "start_time": "2026-10-02T00:00:00Z",
-        "venue": "Truist Park",
-        "park_factor": 1.067,
-        "weather": {
-          "temp_f": 82.4,
-          "wind_mph": 11.5,
-          "wind_dir": "SE",
-          "condition": "Clear",
-          "provisional": false
-        },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
-      },
-      "projections": {
-        "fair_home_ml": -104,
-        "fair_away_ml": 104,
-        "fair_home_p": 0.511,
-        "fair_away_p": 0.489,
-        "fair_f5_p": 0.488,
-        "proj_total": 8.7,
-        "home_proj_runs": 4.24,
-        "away_proj_runs": 4.5,
-        "home_woba": 0.3021,
-        "away_woba": 0.294,
-        "sp_home_era": 1.47,
-        "sp_away_era": 3.32,
-        "sp_home_fip": 4.05,
-        "sp_away_fip": 5.09,
-        "sp_home_k9": 5.4,
-        "sp_away_k9": 6.64,
-        "sp_home_bb9": 0.98,
-        "sp_away_bb9": 2.66,
-        "sp_home_whip": 0.6,
-        "sp_away_whip": 1.07,
-        "sp_home_ip": 18.1,
-        "sp_away_ip": 27.1,
-        "sp_home_source": "season_2026",
-        "sp_away_source": "last_30d",
-        "h_bat_source": "last_30d",
-        "a_bat_source": "last_30d",
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_bull_detail": [],
-        "a_bull_detail": [],
-        "h_home_wr": 0.61,
-        "a_away_wr": 0.466,
-        "ump_bias": 0.0,
-        "mkt_home_p": 0.4978,
-        "mkt_away_p": 0.5022,
-        "book_lines": {},
-        "best_book": null,
-        "best_book_ml": null
-      },
-      "market_edge": {
-        "best_bet": "NO EDGE",
-        "f5_bet": null,
-        "ev_percent": 0.0,
-        "kelly_stake": "0%",
-        "tier": "SKIP",
-        "bet_side": null,
-        "signals": [
-          "LINEUP_UNCONFIRMED",
-          "WIND_11.5mph_SE"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.4728,
-        "prop_adj": 0.038,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5109,
-        "mkt_home_p": 0.4978,
-        "h_home_wr": 0.61,
-        "a_away_wr": 0.466,
-        "park_factor": 1.067,
-        "ump_bias": 0.0,
-        "sp_suppress_h": 0.2877,
-        "sp_suppress_a": 0.3062
-      }
-    }
-  ],
-  "f1_picks": [
-    {
-      "game_id": "2026-10-01-F1-PHI-ATL",
-      "game_pk": "849844",
-      "home": "ATL",
-      "away": "PHI",
-      "home_full": "Atlanta Braves",
-      "away_full": "Philadelphia Phillies",
-      "home_sp": "Ray Kerr",
-      "away_sp": "Aaron Nola",
-      "start_time": "2026-10-02T00:00:00Z",
-      "status": "scheduled",
-      "score": "Scheduled",
-      "result": null,
-      "prediction": null,
-      "pick_label": null,
-      "confidence": null,
-      "yrfi_p": 0.659,
-      "nrfi_p": 0.341,
-      "away_score_p": 0.432,
-      "home_score_p": 0.368,
-      "kalshi_yes": null,
-      "kalshi_no": null,
-      "kalshi_note": "No Kalshi market found",
-      "data": {
-        "away_f1_score_pct": 0.35,
-        "away_f1_allow_pct": 0.4,
-        "away_recent_f1": [
-          0,
-          0,
-          1,
-          1,
-          1
-        ],
-        "home_f1_score_pct": 0.3,
-        "home_f1_allow_pct": 0.4,
-        "home_recent_f1": [
-          0,
-          1,
-          0,
-          0,
-          1
-        ],
-        "hsp_f1_ra_pct": 0.4,
-        "hsp_era": "N/A",
-        "asp_f1_ra_pct": 0.402,
-        "asp_era": 4.67,
-        "away_top3_ops": 0.72,
-        "home_top3_ops": 0.72,
-        "park_f1_delta": 0.018,
-        "weather_f1_delta": 0.0,
-        "hsp_source": "era_estimate",
-        "asp_source": "i01_split_blend"
-      },
-      "signals": [
-        "Kerr_ERA_ESTIMATED",
-        "LINEUP_UNCONFIRMED"
-      ],
-      "nrfi_disqualified": false
-    }
-  ]
+  "picks": [],
+  "f1_picks": []
 }
