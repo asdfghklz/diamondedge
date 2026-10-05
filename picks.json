@@ -1,12 +1,12 @@
 {
   "date": "2026-10-05",
   "run_type": "full",
-  "generated": "2026-10-05T15:36:57.381548Z",
+  "generated": "2026-10-05T20:54:28.850408Z",
   "game_count": 2,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,14 +38,14 @@
         "venue": "Progressive Field",
         "park_factor": 0.988,
         "weather": {
-          "temp_f": 61.6,
+          "temp_f": 61.5,
           "wind_mph": 16.1,
           "wind_dir": "NW",
-          "condition": "Clear",
+          "condition": "Clouds",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Gabe Morales",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
@@ -53,12 +53,12 @@
       "projections": {
         "fair_home_ml": -118,
         "fair_away_ml": 118,
-        "fair_home_p": 0.541,
-        "fair_away_p": 0.459,
-        "fair_f5_p": 0.51,
+        "fair_home_p": 0.542,
+        "fair_away_p": 0.458,
+        "fair_f5_p": 0.511,
         "proj_total": 9.3,
         "home_proj_runs": 4.61,
-        "away_proj_runs": 4.71,
+        "away_proj_runs": 4.7,
         "home_woba": 0.3343,
         "away_woba": 0.3294,
         "sp_home_era": 3.76,
@@ -84,8 +84,8 @@
         "h_home_wr": 0.57,
         "a_away_wr": 0.401,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.5767,
-        "mkt_away_p": 0.4233,
+        "mkt_home_p": 0.5809,
+        "mkt_away_p": 0.4191,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -98,18 +98,18 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
+          "LINEUPS_CONFIRMED",
           "WIND_16.1mph_NW"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4902,
+        "base_pyth_p": 0.4912,
         "prop_adj": 0.0504,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5407,
-        "mkt_home_p": 0.5767,
+        "final_home_p": 0.5416,
+        "mkt_home_p": 0.5809,
         "h_home_wr": 0.57,
         "a_away_wr": 0.401,
         "park_factor": 0.988,
@@ -132,27 +132,27 @@
         "venue": "Tropicana Field",
         "park_factor": 0.908,
         "weather": {
-          "temp_f": 83.8,
+          "temp_f": 85.8,
           "wind_mph": 8.1,
-          "wind_dir": "S",
+          "wind_dir": "NW",
           "condition": "Clouds",
           "provisional": false
         },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
+        "umpire": "Jeremie Rehak",
+        "lineup_confirmed": true,
         "status": "scheduled",
         "score": "Scheduled",
         "result": null
       },
       "projections": {
-        "fair_home_ml": -112,
-        "fair_away_ml": 112,
-        "fair_home_p": 0.529,
-        "fair_away_p": 0.471,
-        "fair_f5_p": 0.531,
-        "proj_total": 8.0,
-        "home_proj_runs": 4.12,
-        "away_proj_runs": 3.84,
+        "fair_home_ml": -111,
+        "fair_away_ml": 111,
+        "fair_home_p": 0.526,
+        "fair_away_p": 0.474,
+        "fair_f5_p": 0.528,
+        "proj_total": 8.3,
+        "home_proj_runs": 4.31,
+        "away_proj_runs": 4.04,
         "home_woba": 0.3108,
         "away_woba": 0.3205,
         "sp_home_era": 4.42,
@@ -178,8 +178,8 @@
         "h_home_wr": 0.606,
         "a_away_wr": 0.545,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.4674,
-        "mkt_away_p": 0.5326,
+        "mkt_home_p": 0.4717,
+        "mkt_away_p": 0.5283,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -192,18 +192,19 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED",
-          "PITCHERS_PARK"
+          "LINEUPS_CONFIRMED",
+          "PITCHERS_PARK",
+          "HOT_WEATHER"
         ]
       },
       "math": {
-        "base_pyth_p": 0.5322,
+        "base_pyth_p": 0.5296,
         "prop_adj": -0.0035,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5287,
-        "mkt_home_p": 0.4674,
+        "final_home_p": 0.5261,
+        "mkt_home_p": 0.4717,
         "h_home_wr": 0.606,
         "a_away_wr": 0.545,
         "park_factor": 0.908,
@@ -232,8 +233,8 @@
       "confidence": null,
       "yrfi_p": 0.612,
       "nrfi_p": 0.388,
-      "away_score_p": 0.421,
-      "home_score_p": 0.313,
+      "away_score_p": 0.422,
+      "home_score_p": 0.314,
       "kalshi_yes": null,
       "kalshi_no": null,
       "kalshi_note": "No Kalshi market found",
@@ -260,16 +261,14 @@
         "hsp_era": 3.76,
         "asp_f1_ra_pct": 0.317,
         "asp_era": 4.44,
-        "away_top3_ops": 0.72,
-        "home_top3_ops": 0.72,
+        "away_top3_ops": 0.767,
+        "home_top3_ops": 0.746,
         "park_f1_delta": 0.009,
         "weather_f1_delta": 0.0,
         "hsp_source": "i01_split_blend",
         "asp_source": "i01_split_blend"
       },
-      "signals": [
-        "LINEUP_UNCONFIRMED"
-      ],
+      "signals": [],
       "nrfi_disqualified": false
     },
     {
@@ -288,10 +287,10 @@
       "prediction": null,
       "pick_label": null,
       "confidence": null,
-      "yrfi_p": 0.485,
-      "nrfi_p": 0.515,
-      "away_score_p": 0.249,
-      "home_score_p": 0.314,
+      "yrfi_p": 0.502,
+      "nrfi_p": 0.498,
+      "away_score_p": 0.25,
+      "home_score_p": 0.315,
       "kalshi_yes": null,
       "kalshi_no": null,
       "kalshi_note": "No Kalshi market found",
@@ -318,15 +317,15 @@
         "hsp_era": 4.42,
         "asp_f1_ra_pct": 0.233,
         "asp_era": 1.95,
-        "away_top3_ops": 0.72,
-        "home_top3_ops": 0.72,
+        "away_top3_ops": 0.831,
+        "home_top3_ops": 0.827,
         "park_f1_delta": 0.0,
-        "weather_f1_delta": 0.0,
+        "weather_f1_delta": 0.015,
         "hsp_source": "i01_split_blend",
         "asp_source": "i01_split_blend"
       },
       "signals": [
-        "LINEUP_UNCONFIRMED"
+        "HOT_WEATHER_F1"
       ],
       "nrfi_disqualified": false
     }
