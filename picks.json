@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "run_type": "full",
-  "generated": "2026-10-09T03:02:26.708372Z",
-  "game_count": 1,
+  "generated": "2026-10-09T14:10:25.780721Z",
+  "game_count": 0,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,161 +23,6 @@
     },
     "train_games": 33292
   },
-  "picks": [
-    {
-      "game_metadata": {
-        "game_id": "2026-10-08-CLE-CWS",
-        "game_pk": "849832",
-        "home": "CWS",
-        "away": "CLE",
-        "home_full": "Chicago White Sox",
-        "away_full": "Cleveland Guardians",
-        "home_sp": "Hagen Smith",
-        "away_sp": "Parker Messick",
-        "start_time": "2026-10-09T00:00:00Z",
-        "venue": "Rate Field",
-        "park_factor": 1.007,
-        "weather": {
-          "temp_f": 72.3,
-          "wind_mph": 1.0,
-          "wind_dir": "W",
-          "condition": "Clear",
-          "provisional": false
-        },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
-      },
-      "projections": {
-        "fair_home_ml": 129,
-        "fair_away_ml": -129,
-        "fair_home_p": 0.436,
-        "fair_away_p": 0.564,
-        "fair_f5_p": 0.484,
-        "proj_total": 9.0,
-        "home_proj_runs": 4.56,
-        "away_proj_runs": 4.41,
-        "home_woba": 0.3223,
-        "away_woba": 0.3474,
-        "sp_home_era": 1.29,
-        "sp_away_era": 2.56,
-        "sp_home_fip": 2.42,
-        "sp_away_fip": 3.14,
-        "sp_home_k9": 13.18,
-        "sp_away_k9": 9.32,
-        "sp_home_bb9": 5.14,
-        "sp_away_bb9": 2.37,
-        "sp_home_whip": 0.96,
-        "sp_away_whip": 1.06,
-        "sp_home_ip": 28.0,
-        "sp_away_ip": 186.1,
-        "sp_home_source": "season_2026",
-        "sp_away_source": "season_2026",
-        "h_bat_source": "last_30d",
-        "a_bat_source": "last_30d",
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_bull_detail": [],
-        "a_bull_detail": [],
-        "h_home_wr": 0.422,
-        "a_away_wr": 0.512,
-        "ump_bias": 0.0,
-        "mkt_home_p": 0.4869,
-        "mkt_away_p": 0.5131,
-        "book_lines": {},
-        "best_book": null,
-        "best_book_ml": null
-      },
-      "market_edge": {
-        "best_bet": "NO EDGE",
-        "f5_bet": null,
-        "ev_percent": 0.0,
-        "kelly_stake": "0%",
-        "tier": "SKIP",
-        "bet_side": null,
-        "signals": [
-          "LINEUP_UNCONFIRMED"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.5153,
-        "prop_adj": -0.0789,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4364,
-        "mkt_home_p": 0.4869,
-        "h_home_wr": 0.422,
-        "a_away_wr": 0.512,
-        "park_factor": 1.007,
-        "ump_bias": 0.0,
-        "sp_suppress_h": 0.2859,
-        "sp_suppress_a": 0.2986
-      }
-    }
-  ],
-  "f1_picks": [
-    {
-      "game_id": "2026-10-08-F1-CLE-CWS",
-      "game_pk": "849832",
-      "home": "CWS",
-      "away": "CLE",
-      "home_full": "Chicago White Sox",
-      "away_full": "Cleveland Guardians",
-      "home_sp": "Hagen Smith",
-      "away_sp": "Parker Messick",
-      "start_time": "2026-10-09T00:00:00Z",
-      "status": "scheduled",
-      "score": "Scheduled",
-      "result": null,
-      "prediction": null,
-      "pick_label": null,
-      "confidence": null,
-      "yrfi_p": 0.58,
-      "nrfi_p": 0.42,
-      "away_score_p": 0.357,
-      "home_score_p": 0.361,
-      "kalshi_yes": null,
-      "kalshi_no": null,
-      "kalshi_note": "No Kalshi market found",
-      "data": {
-        "away_f1_score_pct": 0.35,
-        "away_f1_allow_pct": 0.3,
-        "away_recent_f1": [
-          0,
-          0,
-          0,
-          1,
-          0
-        ],
-        "home_f1_score_pct": 0.45,
-        "home_f1_allow_pct": 0.3,
-        "home_recent_f1": [
-          1,
-          1,
-          0,
-          0,
-          1
-        ],
-        "hsp_f1_ra_pct": 0.4,
-        "hsp_era": "N/A",
-        "asp_f1_ra_pct": 0.167,
-        "asp_era": 2.56,
-        "away_top3_ops": 0.72,
-        "home_top3_ops": 0.72,
-        "park_f1_delta": -0.009,
-        "weather_f1_delta": 0.0,
-        "hsp_source": "era_estimate",
-        "asp_source": "i01_split_blend"
-      },
-      "signals": [
-        "Smith_ERA_ESTIMATED",
-        "LINEUP_UNCONFIRMED",
-        "Messick_DOMINATES_F1"
-      ],
-      "nrfi_disqualified": false
-    }
-  ]
+  "picks": [],
+  "f1_picks": []
 }
