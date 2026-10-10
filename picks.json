@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "run_type": "full",
-  "generated": "2026-10-10T02:37:24.073719Z",
-  "game_count": 0,
+  "generated": "2026-10-10T13:19:23.713570Z",
+  "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,6 +23,160 @@
     },
     "train_games": 33292
   },
-  "picks": [],
-  "f1_picks": []
+  "picks": [
+    {
+      "game_metadata": {
+        "game_id": "2026-10-10-CWS-CLE",
+        "game_pk": "849831",
+        "home": "CLE",
+        "away": "CWS",
+        "home_full": "Cleveland Guardians",
+        "away_full": "Chicago White Sox",
+        "home_sp": "Gavin Williams",
+        "away_sp": "Sean Burke",
+        "start_time": "2026-10-11T00:00:00Z",
+        "venue": "Progressive Field",
+        "park_factor": 0.988,
+        "weather": {
+          "temp_f": 58.0,
+          "wind_mph": 15.0,
+          "wind_dir": "SE",
+          "condition": "Clouds",
+          "provisional": false
+        },
+        "umpire": "TBD",
+        "lineup_confirmed": false,
+        "status": "scheduled",
+        "score": "Scheduled",
+        "result": null
+      },
+      "projections": {
+        "fair_home_ml": -115,
+        "fair_away_ml": 115,
+        "fair_home_p": 0.534,
+        "fair_away_p": 0.466,
+        "fair_f5_p": 0.504,
+        "proj_total": 8.5,
+        "home_proj_runs": 4.19,
+        "away_proj_runs": 4.34,
+        "home_woba": 0.3453,
+        "away_woba": 0.3264,
+        "sp_home_era": 3.76,
+        "sp_away_era": 3.34,
+        "sp_home_fip": 3.54,
+        "sp_away_fip": 3.69,
+        "sp_home_k9": 12.11,
+        "sp_away_k9": 9.66,
+        "sp_home_bb9": 2.98,
+        "sp_away_bb9": 3.24,
+        "sp_home_whip": 1.11,
+        "sp_away_whip": 1.2,
+        "sp_home_ip": 184.1,
+        "sp_away_ip": 172.1,
+        "sp_home_source": "season_2026",
+        "sp_away_source": "season_2026",
+        "h_bat_source": "last_30d",
+        "a_bat_source": "last_30d",
+        "h_bull_tax": 0.0,
+        "a_bull_tax": 0.0,
+        "h_bull_detail": [],
+        "a_bull_detail": [],
+        "h_home_wr": 0.57,
+        "a_away_wr": 0.401,
+        "ump_bias": 0.0,
+        "mkt_home_p": 0.5555,
+        "mkt_away_p": 0.4445,
+        "book_lines": {},
+        "best_book": null,
+        "best_book_ml": null
+      },
+      "market_edge": {
+        "best_bet": "NO EDGE",
+        "f5_bet": null,
+        "ev_percent": 0.0,
+        "kelly_stake": "0%",
+        "tier": "SKIP",
+        "bet_side": null,
+        "signals": [
+          "LINEUP_UNCONFIRMED",
+          "WIND_15.0mph_SE"
+        ]
+      },
+      "math": {
+        "base_pyth_p": 0.4839,
+        "prop_adj": 0.0504,
+        "ump_adj": 0.0,
+        "h_fatigue_tax": 0.0,
+        "a_fatigue_tax": 0.0,
+        "final_home_p": 0.5343,
+        "mkt_home_p": 0.5555,
+        "h_home_wr": 0.57,
+        "a_away_wr": 0.401,
+        "park_factor": 0.988,
+        "ump_bias": 0.0,
+        "sp_suppress_h": 0.3106,
+        "sp_suppress_a": 0.3064
+      }
+    }
+  ],
+  "f1_picks": [
+    {
+      "game_id": "2026-10-10-F1-CWS-CLE",
+      "game_pk": "849831",
+      "home": "CLE",
+      "away": "CWS",
+      "home_full": "Cleveland Guardians",
+      "away_full": "Chicago White Sox",
+      "home_sp": "Gavin Williams",
+      "away_sp": "Sean Burke",
+      "start_time": "2026-10-11T00:00:00Z",
+      "status": "scheduled",
+      "score": "Scheduled",
+      "result": null,
+      "prediction": null,
+      "pick_label": null,
+      "confidence": null,
+      "yrfi_p": 0.611,
+      "nrfi_p": 0.389,
+      "away_score_p": 0.406,
+      "home_score_p": 0.33,
+      "kalshi_yes": null,
+      "kalshi_no": null,
+      "kalshi_note": "No Kalshi market found",
+      "data": {
+        "away_f1_score_pct": 0.45,
+        "away_f1_allow_pct": 0.3,
+        "away_recent_f1": [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "home_f1_score_pct": 0.3,
+        "home_f1_allow_pct": 0.3,
+        "home_recent_f1": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "hsp_f1_ra_pct": 0.382,
+        "hsp_era": 3.76,
+        "asp_f1_ra_pct": 0.399,
+        "asp_era": 3.34,
+        "away_top3_ops": 0.72,
+        "home_top3_ops": 0.72,
+        "park_f1_delta": 0.009,
+        "weather_f1_delta": 0.0,
+        "hsp_source": "i01_split_blend",
+        "asp_source": "i01_split_blend"
+      },
+      "signals": [
+        "LINEUP_UNCONFIRMED"
+      ],
+      "nrfi_disqualified": false
+    }
+  ]
 }
