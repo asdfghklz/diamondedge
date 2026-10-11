@@ -1,12 +1,12 @@
 {
   "date": "2026-10-11",
   "run_type": "full",
-  "generated": "2026-10-11T13:49:16.520950Z",
+  "generated": "2026-10-11T17:51:36.252878Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 1,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,9 +38,9 @@
         "venue": "American Family Field",
         "park_factor": 1.003,
         "weather": {
-          "temp_f": 59.8,
-          "wind_mph": 4.0,
-          "wind_dir": "SE",
+          "temp_f": 75.0,
+          "wind_mph": 9.2,
+          "wind_dir": "S",
           "condition": "Clear",
           "provisional": false
         },
@@ -56,9 +56,9 @@
         "fair_home_p": 0.451,
         "fair_away_p": 0.549,
         "fair_f5_p": 0.481,
-        "proj_total": 9.0,
-        "home_proj_runs": 4.5,
-        "away_proj_runs": 4.5,
+        "proj_total": 9.1,
+        "home_proj_runs": 4.55,
+        "away_proj_runs": 4.55,
         "home_woba": 0.3418,
         "away_woba": 0.3492,
         "sp_home_era": 1.8,
