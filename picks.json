@@ -1,12 +1,12 @@
 {
   "date": "2026-10-13",
   "run_type": "full",
-  "generated": "2026-10-13T14:50:15.152456Z",
+  "generated": "2026-10-13T19:40:48.177359Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,10 +38,10 @@
         "venue": "Tropicana Field",
         "park_factor": 0.908,
         "weather": {
-          "temp_f": 80.1,
-          "wind_mph": 8.1,
-          "wind_dir": "NE",
-          "condition": "Clear",
+          "temp_f": 86.8,
+          "wind_mph": 4.6,
+          "wind_dir": "SW",
+          "condition": "Clouds",
           "provisional": false
         },
         "umpire": "TBD",
@@ -51,14 +51,14 @@
         "result": null
       },
       "projections": {
-        "fair_home_ml": -139,
-        "fair_away_ml": 139,
-        "fair_home_p": 0.581,
-        "fair_away_p": 0.419,
-        "fair_f5_p": 0.573,
-        "proj_total": 8.6,
-        "home_proj_runs": 4.61,
-        "away_proj_runs": 3.97,
+        "fair_home_ml": -140,
+        "fair_away_ml": 140,
+        "fair_home_p": 0.583,
+        "fair_away_p": 0.417,
+        "fair_f5_p": 0.575,
+        "proj_total": 8.5,
+        "home_proj_runs": 4.57,
+        "away_proj_runs": 3.92,
         "home_woba": 0.3033,
         "away_woba": 0.357,
         "sp_home_era": 4.42,
@@ -99,16 +99,17 @@
         "bet_side": null,
         "signals": [
           "LINEUP_UNCONFIRMED",
-          "PITCHERS_PARK"
+          "PITCHERS_PARK",
+          "HOT_WEATHER"
         ]
       },
       "math": {
-        "base_pyth_p": 0.568,
+        "base_pyth_p": 0.5697,
         "prop_adj": 0.013,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.581,
+        "final_home_p": 0.5827,
         "mkt_home_p": 0.5497,
         "h_home_wr": 0.606,
         "a_away_wr": 0.512,
@@ -136,8 +137,8 @@
       "prediction": null,
       "pick_label": null,
       "confidence": null,
-      "yrfi_p": 0.496,
-      "nrfi_p": 0.504,
+      "yrfi_p": 0.511,
+      "nrfi_p": 0.489,
       "away_score_p": 0.244,
       "home_score_p": 0.333,
       "kalshi_yes": null,
@@ -169,13 +170,14 @@
         "away_top3_ops": 0.72,
         "home_top3_ops": 0.72,
         "park_f1_delta": 0.0,
-        "weather_f1_delta": 0.0,
+        "weather_f1_delta": 0.015,
         "hsp_source": "i01_split_blend",
         "asp_source": "i01_split_blend"
       },
       "signals": [
         "LINEUP_UNCONFIRMED",
-        "Messick_DOMINATES_F1"
+        "Messick_DOMINATES_F1",
+        "HOT_WEATHER_F1"
       ],
       "nrfi_disqualified": false
     }
