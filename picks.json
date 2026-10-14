@@ -1,12 +1,12 @@
 {
   "date": "2026-10-14",
   "run_type": "full",
-  "generated": "2026-10-14T12:41:13.939387Z",
+  "generated": "2026-10-14T17:42:04.870227Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,9 +38,9 @@
         "venue": "UNIQLO Field at Dodger Stadium",
         "park_factor": 0.912,
         "weather": {
-          "temp_f": 61.1,
-          "wind_mph": 0.0,
-          "wind_dir": "N",
+          "temp_f": 75.3,
+          "wind_mph": 2.0,
+          "wind_dir": "S",
           "condition": "Clear",
           "provisional": false
         },
@@ -56,9 +56,9 @@
         "fair_home_p": 0.469,
         "fair_away_p": 0.531,
         "fair_f5_p": 0.448,
-        "proj_total": 8.0,
-        "home_proj_runs": 3.72,
-        "away_proj_runs": 4.3,
+        "proj_total": 8.3,
+        "home_proj_runs": 3.83,
+        "away_proj_runs": 4.43,
         "home_woba": 0.3558,
         "away_woba": 0.3068,
         "sp_home_era": 1.9,
@@ -84,8 +84,8 @@
         "h_home_wr": 0.667,
         "a_away_wr": 0.529,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.616,
-        "mkt_away_p": 0.384,
+        "mkt_home_p": 0.6095,
+        "mkt_away_p": 0.3905,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -103,13 +103,13 @@
         ]
       },
       "math": {
-        "base_pyth_p": 0.4341,
+        "base_pyth_p": 0.4338,
         "prop_adj": 0.0348,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4689,
-        "mkt_home_p": 0.616,
+        "final_home_p": 0.4686,
+        "mkt_home_p": 0.6095,
         "h_home_wr": 0.667,
         "a_away_wr": 0.529,
         "park_factor": 0.912,
