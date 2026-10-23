@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "run_type": "full",
-  "generated": "2026-10-23T01:48:23.094425Z",
-  "game_count": 0,
+  "generated": "2026-10-23T12:27:05.789830Z",
+  "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,6 +23,160 @@
     },
     "train_games": 33292
   },
-  "picks": [],
-  "f1_picks": []
+  "picks": [
+    {
+      "game_metadata": {
+        "game_id": "2026-10-23-TB-MIL",
+        "game_pk": "849805",
+        "home": "MIL",
+        "away": "TB",
+        "home_full": "Milwaukee Brewers",
+        "away_full": "Tampa Bay Rays",
+        "home_sp": "Jacob Misiorowski",
+        "away_sp": "Nick Martinez",
+        "start_time": "2026-10-24T00:00:00Z",
+        "venue": "American Family Field",
+        "park_factor": 1.003,
+        "weather": {
+          "temp_f": 51.3,
+          "wind_mph": 1.0,
+          "wind_dir": "SE",
+          "condition": "Fog",
+          "provisional": false
+        },
+        "umpire": "TBD",
+        "lineup_confirmed": false,
+        "status": "scheduled",
+        "score": "Scheduled",
+        "result": null
+      },
+      "projections": {
+        "fair_home_ml": 118,
+        "fair_away_ml": -118,
+        "fair_home_p": 0.458,
+        "fair_away_p": 0.542,
+        "fair_f5_p": 0.46,
+        "proj_total": 8.6,
+        "home_proj_runs": 4.11,
+        "away_proj_runs": 4.48,
+        "home_woba": 0.3446,
+        "away_woba": 0.3177,
+        "sp_home_era": 1.8,
+        "sp_away_era": 3.1,
+        "sp_home_fip": 2.23,
+        "sp_away_fip": 4.03,
+        "sp_home_k9": 12.98,
+        "sp_away_k9": 5.45,
+        "sp_home_bb9": 2.27,
+        "sp_away_bb9": 1.3,
+        "sp_home_whip": 0.8,
+        "sp_away_whip": 1.09,
+        "sp_home_ip": 174.2,
+        "sp_away_ip": 180.0,
+        "sp_home_source": "season_2026",
+        "sp_away_source": "season_2026",
+        "h_bat_source": "last_30d",
+        "a_bat_source": "last_30d",
+        "h_bull_tax": 0.0,
+        "a_bull_tax": 0.0,
+        "h_bull_detail": [],
+        "a_bull_detail": [],
+        "h_home_wr": 0.584,
+        "a_away_wr": 0.521,
+        "ump_bias": 0.0,
+        "mkt_home_p": 0.6308,
+        "mkt_away_p": 0.3692,
+        "book_lines": {},
+        "best_book": null,
+        "best_book_ml": null
+      },
+      "market_edge": {
+        "best_bet": "NO EDGE",
+        "f5_bet": null,
+        "ev_percent": 0.0,
+        "kelly_stake": "0%",
+        "tier": "SKIP",
+        "bet_side": null,
+        "signals": [
+          "LINEUP_UNCONFIRMED"
+        ]
+      },
+      "math": {
+        "base_pyth_p": 0.4606,
+        "prop_adj": -0.0026,
+        "ump_adj": 0.0,
+        "h_fatigue_tax": 0.0,
+        "a_fatigue_tax": 0.0,
+        "final_home_p": 0.458,
+        "mkt_home_p": 0.6308,
+        "h_home_wr": 0.584,
+        "a_away_wr": 0.521,
+        "park_factor": 1.003,
+        "ump_bias": 0.0,
+        "sp_suppress_h": 0.291,
+        "sp_suppress_a": 0.304
+      }
+    }
+  ],
+  "f1_picks": [
+    {
+      "game_id": "2026-10-23-F1-TB-MIL",
+      "game_pk": "849805",
+      "home": "MIL",
+      "away": "TB",
+      "home_full": "Milwaukee Brewers",
+      "away_full": "Tampa Bay Rays",
+      "home_sp": "Jacob Misiorowski",
+      "away_sp": "Nick Martinez",
+      "start_time": "2026-10-24T00:00:00Z",
+      "status": "scheduled",
+      "score": "Scheduled",
+      "result": null,
+      "prediction": null,
+      "pick_label": null,
+      "confidence": null,
+      "yrfi_p": 0.495,
+      "nrfi_p": 0.505,
+      "away_score_p": 0.311,
+      "home_score_p": 0.277,
+      "kalshi_yes": null,
+      "kalshi_no": null,
+      "kalshi_note": "No Kalshi market found",
+      "data": {
+        "away_f1_score_pct": 0.35,
+        "away_f1_allow_pct": 0.2,
+        "away_recent_f1": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "home_f1_score_pct": 0.25,
+        "home_f1_allow_pct": 0.1,
+        "home_recent_f1": [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "hsp_f1_ra_pct": 0.266,
+        "hsp_era": 1.8,
+        "asp_f1_ra_pct": 0.2,
+        "asp_era": 3.1,
+        "away_top3_ops": 0.72,
+        "home_top3_ops": 0.72,
+        "park_f1_delta": -0.007,
+        "weather_f1_delta": 0.0,
+        "hsp_source": "i01_split_blend",
+        "asp_source": "i01_split_blend"
+      },
+      "signals": [
+        "LINEUP_UNCONFIRMED",
+        "Martinez_DOMINATES_F1"
+      ],
+      "nrfi_disqualified": false
+    }
+  ]
 }
