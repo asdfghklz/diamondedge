@@ -1,12 +1,12 @@
 {
   "date": "2026-10-24",
   "run_type": "full",
-  "generated": "2026-10-24T16:23:16.633376Z",
+  "generated": "2026-10-24T19:34:57.918304Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,8 +38,8 @@
         "venue": "American Family Field",
         "park_factor": 1.003,
         "weather": {
-          "temp_f": 62.5,
-          "wind_mph": 8.1,
+          "temp_f": 70.1,
+          "wind_mph": 10.4,
           "wind_dir": "S",
           "condition": "Clear",
           "provisional": false
@@ -55,10 +55,10 @@
         "fair_away_ml": -115,
         "fair_home_p": 0.466,
         "fair_away_p": 0.534,
-        "fair_f5_p": 0.467,
-        "proj_total": 8.9,
-        "home_proj_runs": 4.32,
-        "away_proj_runs": 4.63,
+        "fair_f5_p": 0.468,
+        "proj_total": 9.1,
+        "home_proj_runs": 4.37,
+        "away_proj_runs": 4.68,
         "home_woba": 0.3611,
         "away_woba": 0.3327,
         "sp_home_era": 2.47,
@@ -98,16 +98,17 @@
         "tier": "SKIP",
         "bet_side": null,
         "signals": [
-          "LINEUP_UNCONFIRMED"
+          "LINEUP_UNCONFIRMED",
+          "WIND_10.4mph_S"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4683,
+        "base_pyth_p": 0.4687,
         "prop_adj": -0.0026,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4657,
+        "final_home_p": 0.4661,
         "mkt_home_p": 0.523,
         "h_home_wr": 0.584,
         "a_away_wr": 0.521,
