@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "run_type": "full",
-  "generated": "2026-10-25T01:29:44.026540Z",
-  "game_count": 1,
+  "generated": "2026-10-25T12:22:32.359032Z",
+  "game_count": 0,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,161 +23,6 @@
     },
     "train_games": 33292
   },
-  "picks": [
-    {
-      "game_metadata": {
-        "game_id": "2026-10-24-TB-MIL",
-        "game_pk": "849802",
-        "home": "MIL",
-        "away": "TB",
-        "home_full": "Milwaukee Brewers",
-        "away_full": "Tampa Bay Rays",
-        "home_sp": "Logan Henderson",
-        "away_sp": "Drew Rasmussen",
-        "start_time": "2026-10-25T00:00:00Z",
-        "venue": "American Family Field",
-        "park_factor": 1.003,
-        "weather": {
-          "temp_f": 70.1,
-          "wind_mph": 10.4,
-          "wind_dir": "S",
-          "condition": "Clear",
-          "provisional": false
-        },
-        "umpire": "TBD",
-        "lineup_confirmed": false,
-        "status": "scheduled",
-        "score": "Scheduled",
-        "result": null
-      },
-      "projections": {
-        "fair_home_ml": 115,
-        "fair_away_ml": -115,
-        "fair_home_p": 0.466,
-        "fair_away_p": 0.534,
-        "fair_f5_p": 0.468,
-        "proj_total": 9.1,
-        "home_proj_runs": 4.37,
-        "away_proj_runs": 4.68,
-        "home_woba": 0.3611,
-        "away_woba": 0.3327,
-        "sp_home_era": 2.47,
-        "sp_away_era": 2.67,
-        "sp_home_fip": 3.39,
-        "sp_away_fip": 2.89,
-        "sp_home_k9": 10.07,
-        "sp_away_k9": 9.1,
-        "sp_home_bb9": 1.74,
-        "sp_away_bb9": 1.67,
-        "sp_home_whip": 0.84,
-        "sp_away_whip": 0.91,
-        "sp_home_ip": 98.1,
-        "sp_away_ip": 172.0,
-        "sp_home_source": "season_2026",
-        "sp_away_source": "season_2026",
-        "h_bat_source": "last_30d",
-        "a_bat_source": "last_30d",
-        "h_bull_tax": 0.0,
-        "a_bull_tax": 0.0,
-        "h_bull_detail": [],
-        "a_bull_detail": [],
-        "h_home_wr": 0.584,
-        "a_away_wr": 0.521,
-        "ump_bias": 0.0,
-        "mkt_home_p": 0.523,
-        "mkt_away_p": 0.477,
-        "book_lines": {},
-        "best_book": null,
-        "best_book_ml": null
-      },
-      "market_edge": {
-        "best_bet": "NO EDGE",
-        "f5_bet": null,
-        "ev_percent": 0.0,
-        "kelly_stake": "0%",
-        "tier": "SKIP",
-        "bet_side": null,
-        "signals": [
-          "LINEUP_UNCONFIRMED",
-          "WIND_10.4mph_S"
-        ]
-      },
-      "math": {
-        "base_pyth_p": 0.4687,
-        "prop_adj": -0.0026,
-        "ump_adj": 0.0,
-        "h_fatigue_tax": 0.0,
-        "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4661,
-        "mkt_home_p": 0.523,
-        "h_home_wr": 0.584,
-        "a_away_wr": 0.521,
-        "park_factor": 1.003,
-        "ump_bias": 0.0,
-        "sp_suppress_h": 0.2977,
-        "sp_suppress_a": 0.2997
-      }
-    }
-  ],
-  "f1_picks": [
-    {
-      "game_id": "2026-10-24-F1-TB-MIL",
-      "game_pk": "849802",
-      "home": "MIL",
-      "away": "TB",
-      "home_full": "Milwaukee Brewers",
-      "away_full": "Tampa Bay Rays",
-      "home_sp": "Logan Henderson",
-      "away_sp": "Drew Rasmussen",
-      "start_time": "2026-10-25T00:00:00Z",
-      "status": "scheduled",
-      "score": "Scheduled",
-      "result": null,
-      "prediction": null,
-      "pick_label": null,
-      "confidence": null,
-      "yrfi_p": 0.512,
-      "nrfi_p": 0.488,
-      "away_score_p": 0.262,
-      "home_score_p": 0.349,
-      "kalshi_yes": null,
-      "kalshi_no": null,
-      "kalshi_note": "No Kalshi market found",
-      "data": {
-        "away_f1_score_pct": 0.35,
-        "away_f1_allow_pct": 0.25,
-        "away_recent_f1": [
-          0,
-          0,
-          1,
-          0,
-          0
-        ],
-        "home_f1_score_pct": 0.3,
-        "home_f1_allow_pct": 0.1,
-        "home_recent_f1": [
-          0,
-          1,
-          1,
-          0,
-          1
-        ],
-        "hsp_f1_ra_pct": 0.149,
-        "hsp_era": 2.47,
-        "asp_f1_ra_pct": 0.26,
-        "asp_era": 2.67,
-        "away_top3_ops": 0.72,
-        "home_top3_ops": 0.72,
-        "park_f1_delta": -0.007,
-        "weather_f1_delta": 0.0,
-        "hsp_source": "i01_split_blend",
-        "asp_source": "i01_split_blend"
-      },
-      "signals": [
-        "LINEUP_UNCONFIRMED",
-        "Henderson_DOMINATES_F1"
-      ],
-      "nrfi_disqualified": false
-    }
-  ]
+  "picks": [],
+  "f1_picks": []
 }
