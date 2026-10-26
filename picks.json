@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "run_type": "full",
-  "generated": "2026-10-26T01:32:23.016886Z",
-  "game_count": 0,
+  "generated": "2026-10-26T13:57:23.859393Z",
+  "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -23,6 +23,161 @@
     },
     "train_games": 33292
   },
-  "picks": [],
-  "f1_picks": []
+  "picks": [
+    {
+      "game_metadata": {
+        "game_id": "2026-10-26-MIL-TB",
+        "game_pk": "849804",
+        "home": "TB",
+        "away": "MIL",
+        "home_full": "Tampa Bay Rays",
+        "away_full": "Milwaukee Brewers",
+        "home_sp": "Freddy Peralta",
+        "away_sp": "Robert Gasser",
+        "start_time": "2026-10-27T00:00:00Z",
+        "venue": "Tropicana Field",
+        "park_factor": 0.908,
+        "weather": {
+          "temp_f": 73.0,
+          "wind_mph": 16.1,
+          "wind_dir": "N",
+          "condition": "Clear",
+          "provisional": false
+        },
+        "umpire": "TBD",
+        "lineup_confirmed": false,
+        "status": "scheduled",
+        "score": "Scheduled",
+        "result": null
+      },
+      "projections": {
+        "fair_home_ml": 116,
+        "fair_away_ml": -116,
+        "fair_home_p": 0.463,
+        "fair_away_p": 0.537,
+        "fair_f5_p": 0.46,
+        "proj_total": 9.4,
+        "home_proj_runs": 4.48,
+        "away_proj_runs": 4.91,
+        "home_woba": 0.3899,
+        "away_woba": 0.3389,
+        "sp_home_era": 4.42,
+        "sp_away_era": 3.87,
+        "sp_home_fip": 4.35,
+        "sp_away_fip": 4.31,
+        "sp_home_k9": 8.31,
+        "sp_away_k9": 8.48,
+        "sp_home_bb9": 3.36,
+        "sp_away_bb9": 2.88,
+        "sp_home_whip": 1.33,
+        "sp_away_whip": 1.19,
+        "sp_home_ip": 169.0,
+        "sp_away_ip": 109.1,
+        "sp_home_source": "season_2026",
+        "sp_away_source": "season_2026",
+        "h_bat_source": "last_30d",
+        "a_bat_source": "last_30d",
+        "h_bull_tax": 0.0,
+        "a_bull_tax": 0.0,
+        "h_bull_detail": [],
+        "a_bull_detail": [],
+        "h_home_wr": 0.606,
+        "a_away_wr": 0.529,
+        "ump_bias": 0.0,
+        "mkt_home_p": 0.523,
+        "mkt_away_p": 0.477,
+        "book_lines": {},
+        "best_book": null,
+        "best_book_ml": null
+      },
+      "market_edge": {
+        "best_bet": "NO EDGE",
+        "f5_bet": null,
+        "ev_percent": 0.0,
+        "kelly_stake": "0%",
+        "tier": "SKIP",
+        "bet_side": null,
+        "signals": [
+          "LINEUP_UNCONFIRMED",
+          "PITCHERS_PARK",
+          "WIND_16.1mph_N"
+        ]
+      },
+      "math": {
+        "base_pyth_p": 0.4582,
+        "prop_adj": 0.0046,
+        "ump_adj": 0.0,
+        "h_fatigue_tax": 0.0,
+        "a_fatigue_tax": 0.0,
+        "final_home_p": 0.4628,
+        "mkt_home_p": 0.523,
+        "h_home_wr": 0.606,
+        "a_away_wr": 0.529,
+        "park_factor": 0.908,
+        "ump_bias": 0.0,
+        "sp_suppress_h": 0.3172,
+        "sp_suppress_a": 0.3117
+      }
+    }
+  ],
+  "f1_picks": [
+    {
+      "game_id": "2026-10-26-F1-MIL-TB",
+      "game_pk": "849804",
+      "home": "TB",
+      "away": "MIL",
+      "home_full": "Tampa Bay Rays",
+      "away_full": "Milwaukee Brewers",
+      "home_sp": "Freddy Peralta",
+      "away_sp": "Robert Gasser",
+      "start_time": "2026-10-27T00:00:00Z",
+      "status": "scheduled",
+      "score": "Scheduled",
+      "result": null,
+      "prediction": null,
+      "pick_label": null,
+      "confidence": null,
+      "yrfi_p": 0.601,
+      "nrfi_p": 0.399,
+      "away_score_p": 0.389,
+      "home_score_p": 0.347,
+      "kalshi_yes": null,
+      "kalshi_no": null,
+      "kalshi_note": "No Kalshi market found",
+      "data": {
+        "away_f1_score_pct": 0.35,
+        "away_f1_allow_pct": 0.15,
+        "away_recent_f1": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "home_f1_score_pct": 0.35,
+        "home_f1_allow_pct": 0.25,
+        "home_recent_f1": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "hsp_f1_ra_pct": 0.254,
+        "hsp_era": 4.42,
+        "asp_f1_ra_pct": 0.284,
+        "asp_era": 3.87,
+        "away_top3_ops": 0.72,
+        "home_top3_ops": 0.72,
+        "park_f1_delta": 0.0,
+        "weather_f1_delta": 0.0,
+        "hsp_source": "i01_split_blend",
+        "asp_source": "i01_split_blend"
+      },
+      "signals": [
+        "LINEUP_UNCONFIRMED"
+      ],
+      "nrfi_disqualified": false
+    }
+  ]
 }
