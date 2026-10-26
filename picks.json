@@ -1,12 +1,12 @@
 {
   "date": "2026-10-26",
   "run_type": "full",
-  "generated": "2026-10-26T13:57:23.859393Z",
+  "generated": "2026-10-26T18:57:33.877658Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,10 +38,10 @@
         "venue": "Tropicana Field",
         "park_factor": 0.908,
         "weather": {
-          "temp_f": 73.0,
-          "wind_mph": 16.1,
-          "wind_dir": "N",
-          "condition": "Clear",
+          "temp_f": 83.3,
+          "wind_mph": 9.0,
+          "wind_dir": "E",
+          "condition": "Clouds",
           "provisional": false
         },
         "umpire": "TBD",
@@ -51,14 +51,14 @@
         "result": null
       },
       "projections": {
-        "fair_home_ml": 116,
-        "fair_away_ml": -116,
-        "fair_home_p": 0.463,
-        "fair_away_p": 0.537,
-        "fair_f5_p": 0.46,
+        "fair_home_ml": 117,
+        "fair_away_ml": -117,
+        "fair_home_p": 0.462,
+        "fair_away_p": 0.538,
+        "fair_f5_p": 0.459,
         "proj_total": 9.4,
         "home_proj_runs": 4.48,
-        "away_proj_runs": 4.91,
+        "away_proj_runs": 4.92,
         "home_woba": 0.3899,
         "away_woba": 0.3389,
         "sp_home_era": 4.42,
@@ -84,8 +84,8 @@
         "h_home_wr": 0.606,
         "a_away_wr": 0.529,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.523,
-        "mkt_away_p": 0.477,
+        "mkt_home_p": 0.5208,
+        "mkt_away_p": 0.4792,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -99,18 +99,17 @@
         "bet_side": null,
         "signals": [
           "LINEUP_UNCONFIRMED",
-          "PITCHERS_PARK",
-          "WIND_16.1mph_N"
+          "PITCHERS_PARK"
         ]
       },
       "math": {
-        "base_pyth_p": 0.4582,
+        "base_pyth_p": 0.4572,
         "prop_adj": 0.0046,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.4628,
-        "mkt_home_p": 0.523,
+        "final_home_p": 0.4618,
+        "mkt_home_p": 0.5208,
         "h_home_wr": 0.606,
         "a_away_wr": 0.529,
         "park_factor": 0.908,
@@ -137,9 +136,9 @@
       "prediction": null,
       "pick_label": null,
       "confidence": null,
-      "yrfi_p": 0.601,
-      "nrfi_p": 0.399,
-      "away_score_p": 0.389,
+      "yrfi_p": 0.592,
+      "nrfi_p": 0.408,
+      "away_score_p": 0.375,
       "home_score_p": 0.347,
       "kalshi_yes": null,
       "kalshi_no": null,
@@ -163,7 +162,7 @@
           0,
           1
         ],
-        "hsp_f1_ra_pct": 0.254,
+        "hsp_f1_ra_pct": 0.214,
         "hsp_era": 4.42,
         "asp_f1_ra_pct": 0.284,
         "asp_era": 3.87,
@@ -175,7 +174,8 @@
         "asp_source": "i01_split_blend"
       },
       "signals": [
-        "LINEUP_UNCONFIRMED"
+        "LINEUP_UNCONFIRMED",
+        "Peralta_DOMINATES_F1"
       ],
       "nrfi_disqualified": false
     }
