@@ -1,12 +1,12 @@
 {
   "date": "2026-10-27",
   "run_type": "full",
-  "generated": "2026-10-27T13:00:32.448306Z",
+  "generated": "2026-10-27T18:29:30.112155Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,10 +38,10 @@
         "venue": "Tropicana Field",
         "park_factor": 0.908,
         "weather": {
-          "temp_f": 66.9,
-          "wind_mph": 5.8,
-          "wind_dir": "N",
-          "condition": "Clear",
+          "temp_f": 81.6,
+          "wind_mph": 12.7,
+          "wind_dir": "NE",
+          "condition": "Clouds",
           "provisional": false
         },
         "umpire": "TBD",
@@ -56,9 +56,9 @@
         "fair_home_p": 0.506,
         "fair_away_p": 0.494,
         "fair_f5_p": 0.503,
-        "proj_total": 8.1,
-        "home_proj_runs": 4.07,
-        "away_proj_runs": 4.06,
+        "proj_total": 8.7,
+        "home_proj_runs": 4.35,
+        "away_proj_runs": 4.34,
         "home_woba": 0.3201,
         "away_woba": 0.3281,
         "sp_home_era": 3.53,
@@ -84,8 +84,8 @@
         "h_home_wr": 0.606,
         "a_away_wr": 0.529,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.4464,
-        "mkt_away_p": 0.5536,
+        "mkt_home_p": 0.4674,
+        "mkt_away_p": 0.5326,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -100,6 +100,7 @@
         "signals": [
           "LINEUP_UNCONFIRMED",
           "PITCHERS_PARK",
+          "WIND_12.7mph_NE",
           "SP_MIL_NO_DATA"
         ]
       },
@@ -110,7 +111,7 @@
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
         "final_home_p": 0.5057,
-        "mkt_home_p": 0.4464,
+        "mkt_home_p": 0.4674,
         "h_home_wr": 0.606,
         "a_away_wr": 0.529,
         "park_factor": 0.908,
