@@ -1,12 +1,12 @@
 {
   "date": "2026-10-28",
   "run_type": "full",
-  "generated": "2026-10-28T13:51:29.701492Z",
+  "generated": "2026-10-28T18:35:02.452030Z",
   "game_count": 1,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": false,
+  "locked": true,
   "model": {
     "version": "v4.0",
     "data_sources": [
@@ -38,10 +38,10 @@
         "venue": "Tropicana Field",
         "park_factor": 0.908,
         "weather": {
-          "temp_f": 73.9,
-          "wind_mph": 17.3,
-          "wind_dir": "N",
-          "condition": "Clear",
+          "temp_f": 82.1,
+          "wind_mph": 18.4,
+          "wind_dir": "E",
+          "condition": "Clouds",
           "provisional": false
         },
         "umpire": "TBD",
@@ -53,12 +53,12 @@
       "projections": {
         "fair_home_ml": -115,
         "fair_away_ml": 115,
-        "fair_home_p": 0.535,
-        "fair_away_p": 0.465,
-        "fair_f5_p": 0.532,
-        "proj_total": 8.5,
-        "home_proj_runs": 4.41,
-        "away_proj_runs": 4.13,
+        "fair_home_p": 0.534,
+        "fair_away_p": 0.466,
+        "fair_f5_p": 0.531,
+        "proj_total": 8.7,
+        "home_proj_runs": 4.49,
+        "away_proj_runs": 4.21,
         "home_woba": 0.3201,
         "away_woba": 0.3281,
         "sp_home_era": 4.5,
@@ -84,8 +84,8 @@
         "h_home_wr": 0.606,
         "a_away_wr": 0.529,
         "ump_bias": 0.0,
-        "mkt_home_p": 0.4157,
-        "mkt_away_p": 0.5843,
+        "mkt_home_p": 0.4099,
+        "mkt_away_p": 0.5901,
         "book_lines": {},
         "best_book": null,
         "best_book_ml": null
@@ -100,18 +100,18 @@
         "signals": [
           "LINEUP_UNCONFIRMED",
           "PITCHERS_PARK",
-          "WIND_17.3mph_N",
+          "WIND_18.4mph_E",
           "SP_TB_NO_DATA"
         ]
       },
       "math": {
-        "base_pyth_p": 0.53,
+        "base_pyth_p": 0.5294,
         "prop_adj": 0.0046,
         "ump_adj": 0.0,
         "h_fatigue_tax": 0.0,
         "a_fatigue_tax": 0.0,
-        "final_home_p": 0.5346,
-        "mkt_home_p": 0.4157,
+        "final_home_p": 0.534,
+        "mkt_home_p": 0.4099,
         "h_home_wr": 0.606,
         "a_away_wr": 0.529,
         "park_factor": 0.908,
