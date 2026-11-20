@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "run_type": "full",
-  "generated": "2026-11-20T04:11:51.821337Z",
+  "generated": "2026-11-20T15:56:34.082530Z",
   "game_count": 0,
   "ev_pick_count": 0,
   "f1_confident_count": 0,
   "missing_books": [],
-  "locked": true,
+  "locked": false,
   "model": {
     "version": "v4.0",
     "data_sources": [
